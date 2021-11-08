@@ -1,20 +1,24 @@
 #ifndef CARGO_H
 #define CARGO_H
+#include "DragonSpacecraft.h"
+#include <iostream>
 
-class Cargo : RocketBuilder {
+using namespace std;
+
+/**
+ * Note:  A Dragon Spacecraft can only take cargo.  No hoomans allowed.
+ */
+
+class Cargo : RocketBuilder
+{
+private:
+    int numSatellites;
 
 public:
-	int numSatellites;
-
 	Cargo();
-
 	void add(Cargo* cargo);
-
 	void setNumSat();
-
 	int getNumSat();
-
-	void operation();
 };
 
 #endif
