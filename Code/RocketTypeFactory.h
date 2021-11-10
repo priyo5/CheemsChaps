@@ -1,13 +1,12 @@
 #ifndef ROCKETTYPEFACTORY_H
 #define ROCKETTYPEFACTORY_H
 
-class RocketTypeFactory : RocketBuilder {
+#include "RocketTypes.h"
 
-
-public:
-	void CreateFalcon9();
-
-	void CreateFalconHeavy();
+class RocketTypeFactory
+{
+	public:
+		RocketTypes* createRocketType();
+		virtual RocketTypes* makeRocketType() = 0;
 };
-
 #endif
