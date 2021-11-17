@@ -1,7 +1,8 @@
 #ifndef DRAGONSPACECRAFT_H
 #define DRAGONSPACECRAFT_H
-
-class DragonSpacecraft : Spacecraft {
+#include "Spacecraft.h"
+class DragonSpacecraft : public Spacecraft
+{
 
 private:
 	Cargo** cargo;

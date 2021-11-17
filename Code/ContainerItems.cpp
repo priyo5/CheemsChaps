@@ -1,22 +1,40 @@
 #include "ContainerItems.h"
 
 using namespace std;
-
-void ContainerItems::CreateSatelite()
+ContainerItems::ContainerItems()
 {
-	// TODO - implement ContainerItems::CreateSatelite
-	throw "Not yet implemented";
+    this->container = nullptr;
 }
 
-void ContainerItems::CreateStarlink()
+ContainerItems::~ContainerItems()
 {
-	// TODO - implement ContainerItems::CreateStarlink
-	throw "Not yet implemented";
+    delete this->container;
 }
 
 //Getters
 Cargo* ContainerItems::getCargo()
 {
     return this->container;
+}
+
+void ContainerItems::add(Cargo *items)
+{
+    if(this->container == nullptr)
+    {
+        //Set the cargo to point to the new item
+        //Then set the new number of satellites
+        this->container = items;
+        //setNumSat(items->getNumSat());
+    }
+    else
+    {
+        //Basically do nothing since the items have already been added.
+        this->container->add(items);
+    }
+}
+
+void ContainerItems::print()
+{
+
 }
 

@@ -1,26 +1,25 @@
 #include "Cargo.h"
+#include <iostream>
 
-Cargo::Cargo() {
-	// TODO - implement Cargo::Cargo
-	throw "Not yet implemented";
+using namespace std;
+
+//Constructor
+Cargo::Cargo()
+{
+	this->numSatellites = 0;
 }
 
-void Cargo::add(Cargo* cargo) {
-	// TODO - implement Cargo::add
-	throw "Not yet implemented";
+//Default destructor
+Cargo::~Cargo(){}
+
+//Setter for the number of satellites
+void Cargo::setNumSat(int numSat)
+{
+	this->numSatellites = numSat;
 }
 
-void Cargo::setNumSat() {
-	// TODO - implement Cargo::setNumSat
-	throw "Not yet implemented";
-}
-
-int Cargo::getNumSat() {
-	// TODO - implement Cargo::getNumSat
-	throw "Not yet implemented";
-}
-
-void Cargo::operation() {
-	// TODO - implement Cargo::operation
-	throw "Not yet implemented";
+//Getter for the number of satellites
+int Cargo::getNumSat()
+{
+	return this->numSatellites;
 }

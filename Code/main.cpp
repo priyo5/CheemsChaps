@@ -8,7 +8,8 @@
 int main()
 {
     //Daniel - Testing filling cargo with container items
-    Cargo* cargo = new Container();
-    Container->add();
+    Cargo* container = new Container();
+    container->add(new Satellite());
+
     return 0;
 }

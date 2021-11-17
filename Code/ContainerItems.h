@@ -10,15 +10,17 @@ using namespace std;
 
 class ContainerItems : Cargo
 {
-private:
-    Cargo* container;
-
 public:
-	void CreateSatelite();
-	void CreateStarlink();
+    ContainerItems();
+    ~ContainerItems();
+    void add(Cargo* items);
+    void print();
 
     //Getters
     Cargo* getCargo();
+
+private:
+    Cargo* container;
 };
 
 #endif
