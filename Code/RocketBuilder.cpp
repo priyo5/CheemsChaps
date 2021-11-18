@@ -1,5 +1,15 @@
 #include "RocketBuilder.h"
 
+using namespace std;
+
+void RocketBuilder::Launch(){
+	this.state->handleLaunch();
+}
+
+void RocketBuilder::StaticFire(){
+	this.state->handleStaticFireTest();
+}
+
 void RocketBuilder::BuildRocket() {
 	// TODO - implement RocketBuilder::BuildRocket
 	throw "Not yet implemented";
