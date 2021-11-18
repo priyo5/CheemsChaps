@@ -6,7 +6,7 @@
 class RocketBuilder {
 
 private:
-	State state;
+	State* state;
 
 public:
 	void Launch();

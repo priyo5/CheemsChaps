@@ -3,8 +3,10 @@
 
 class State {
 	public:
-	virtual void handleLaunch() = 0;
-	virtual void handleStaticFireTest() = 0;
+		void virtual handleLaunch() = 0;
+		void virtual handleStaticFireTest() = 0;
+		bool passedTest = false;
+		bool Launched = false;
 };
 
 #endif

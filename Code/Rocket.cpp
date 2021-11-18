@@ -1,11 +1,10 @@
 #include "Rocket.h"
+#include "RocketBuilder.h"
 
 void Rocket::Launch() {
-	// TODO - implement Rocket::Launch
-	throw "Not yet implemented";
+	Rocket->Launch();
 }
 
 void Rocket::StaticFire() {
-	// TODO - implement Rocket::StaticFire
-	throw "Not yet implemented";
+	Rocket->StaticFire();
 }

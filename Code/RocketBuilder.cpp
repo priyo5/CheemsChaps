@@ -3,11 +3,11 @@
 using namespace std;
 
 void RocketBuilder::Launch(){
-	this.state->handleLaunch();
+	this->state->handleLaunch();
 }
 
 void RocketBuilder::StaticFire(){
-	this.state->handleStaticFireTest();
+	this->state->handleStaticFireTest();
 }
 
 void RocketBuilder::BuildRocket() {
