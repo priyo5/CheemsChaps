@@ -2,26 +2,15 @@
 #define ROCKETBUILDER_H
 
 #include "State.h"
+#include "String"
 
 class RocketBuilder {
-
-private:
-	State* state;
-
 public:
-	void Launch();
+	virtual void BuildRocketType(string) = 0;
 
-	void StaticFire();
+	virtual void BuildSpacecraftType(string,int) = 0;
 
-	void BuildRocket();
-
-	void BuildRocketType();
-
-	void BuildStage();
-
-	void BuildSpacecraft();
-
-	void BuildCargo();
+	virtual void BuildEngineType(string) = 0;
 };
 
 #endif
