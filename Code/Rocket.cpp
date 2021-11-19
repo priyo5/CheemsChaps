@@ -1,10 +1,10 @@
 #include "Rocket.h"
-#include "RocketBuilder.h"
+#include "LaunchReady.h""
 
-void Rocket::Launch() {
-	Rocket->Launch();
+void Rocket::Launch(){
+	state->handleLaunch();
 }
 
 void Rocket::StaticFire() {
-	Rocket->StaticFire();
+	state->handleStaticFireTest();
 }

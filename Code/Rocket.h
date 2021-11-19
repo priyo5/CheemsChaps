@@ -12,7 +12,6 @@ private:
 
 public:
 	void Launch();
-
 	void StaticFire();
 };
 

@@ -6,7 +6,7 @@
 class RocketTypeBuilder
 {
 public:
-    void RocketTypeBuilder();
+    void BuildRocketType(string Type);
 };
 
 #endif
