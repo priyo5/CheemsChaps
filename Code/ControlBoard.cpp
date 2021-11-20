@@ -1,11 +1,22 @@
+#include <string>
+#include <iostream>
+
 #include "ControlBoard.h"
 
-void ControlBoard::PressL() {
-	// TODO - implement ControlBoard::PressL
-	throw "Not yet implemented";
+using namespace std;
+
+ControlBoard::ControlBoard(Launch *L, StaticFire *S)
+{
+    this -> L = L;
+    this -> S = S;
 }
 
-void ControlBoard::PressS() {
-	// TODO - implement ControlBoard::PressS
-	throw "Not yet implemented";
+void ControlBoard::PressL()
+{
+    this -> L -> excecute();
+}
+
+void ControlBoard::PressS()
+{
+    this -> S -> excecute();
 }

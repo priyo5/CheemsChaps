@@ -1,7 +1,22 @@
 #ifndef ROCKETCARETAKER_H
 #define ROCKETCARETAKER_H
 
-class RocketCaretaker {
+#include <string>
+#include <iostream>
+
+#include "RocketMemento.h"
+
+using namespace std;
+
+class RocketCaretaker
+{
+private:
+    RocketMemento *memento;
+
+public:
+    RocketCaretaker();
+    RocketMemento* getMemento();
+    void setMemento(RocketMemento* rm);
 };
 
 #endif
