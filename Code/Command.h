@@ -1,15 +1,29 @@
+//This represents the Command participant
 #ifndef COMMAND_H
 #define COMMAND_H
 
-class Command {
+#include <string>
+#include <iostream>
 
+#include "Rocket.h"
+
+using namespace std;
+
+class Command
+{
 private:
-	Rocket receiver;
+    //Pointer to a Rocket Object in order to perform the operations
+	Rocket *receiver;
 
 public:
-	void execute();
+    //Constructor which initialises the Command with the passed in Rocket as the receiver
+    Command(Rocket *receiver);
 
-	void getReciver();
+    //Pure virtual function which will be implemented by the Concrete Commands
+	virtual void excecute() = 0;
+
+    //Getter so that the Concrete Commands may access the Receiver Object
+	Rocket *getReceiver();
 };
 
 #endif

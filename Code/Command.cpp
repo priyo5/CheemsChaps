@@ -1,11 +1,16 @@
+#include <string>
+#include <iostream>
+
 #include "Command.h"
 
-void Command::execute() {
-	// TODO - implement Command::execute
-	throw "Not yet implemented";
+using namespace std;
+
+Command::Command(Rocket *receiver)
+{
+    this -> receiver = receiver; 
 }
 
-void Command::getReciver() {
-	// TODO - implement Command::getReciver
-	throw "Not yet implemented";
+Rocket *Command::getReceiver()
+{
+    return this -> receiver;
 }
