@@ -6,7 +6,8 @@
 
 class SpacecraftFactory : public RocketBuilder {
 public:
-	Spacecraft* startSpacecraftFactory();
+	Spacecraft* startSpacecraftFactory(int weight, int numPeople); //Crew
+	Spacecraft* startSpacecraftFactory(int weight, string sat_type); //Dragon
 protected:
 	virtual Spacecraft* createSpacecraft()=0;
 };

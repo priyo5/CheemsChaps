@@ -1,5 +1,6 @@
 #include "CrewDragonFactory.h"
 
-Spacecraft* CrewDragonFactory::createSpacecraft() {
-    return new CrewDragon();
+Spacecraft* CrewDragonFactory::createSpacecraft(int weight, int numPeople)
+{
+    return new CrewDragon(int weight, int numPeople);
 }

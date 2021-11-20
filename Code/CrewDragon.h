@@ -4,9 +4,10 @@
 #include "Spacecraft.h"
 #include "Cargo.h"
 
-class CrewDragon : public Spacecraft {
+class CrewDragon : public Spacecraft
+{
 public:
-	CrewDragon();
+	CrewDragon(int weight, int numPeople);
 	void setNumpeople(int);
 	void setCapacity(int);
 	int getNumpeople();

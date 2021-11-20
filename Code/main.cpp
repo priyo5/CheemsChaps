@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Rocket.h"
+#include "RocketBuilder.h"
 #include "Cargo.h"
 #include "Container.h"
 #include "ContainerItems.h"
@@ -9,6 +11,46 @@
 
 int main()
 {
+    Rocket* rocket = new Rocket();
+
+    //Rocket variables
+
+    //Spacecraft variables
+    int sc = 0; //Crew or Dragon
+    int numPeople = 0; //For crew only
+    int sat_type = 0; //For Dragon only
+    int weight = 0;
+
+    //Engine variables
+
+
+    cout << "What spacecraft? \n0-crew\n1-dragon\n" << endl;
+    cin >> sc;
+    cout << "What weight?"<< endl;
+    cin >> weight;
+
+    if(sc == 0) //Crew
+    {
+        cout << "num people?" << endl;
+        cin >> numPeople;
+        rocket->BuildSpaceCraft("crew", weight, numPeople);
+    }
+    else //Dragon
+    {
+        cout << "Satellite type?\n0-starlink\n1-satellite\n" << endl;
+        cin >> sat_type;
+        if(sat_type == 0) //Starlink
+        {
+            rocket->BuildSpaceCraft("dragon", weight, "starlink");
+        }
+        else //Single satellite
+        {
+            rocket->BuildSpaceCraft("dragon", weight, "satellite");
+        }
+    }
+
+
+
     //Daniel - Testing filling tempContainer with container items
     //This code will go in Reece's spacecraft class when "loading" cargo
     cout << "------------Creating a single satellite---------------" << endl;

@@ -3,7 +3,8 @@
 
 using namespace std;
 
-void RocketTypeBuilder::BuildRocketType(string type){
+void RocketTypeBuilder::BuildRocketType(string type)
+{
     if (type == "Falcon9")
     {
         //create falcon9 if factory is done

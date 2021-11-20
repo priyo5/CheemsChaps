@@ -6,7 +6,7 @@
 
 class CrewDragonFactory : public SpacecraftFactory {
 protected:
-	Spacecraft* createSpacecraft();
+	Spacecraft* createSpacecraft(int weight, int numPeople);
 };
 
 #endif

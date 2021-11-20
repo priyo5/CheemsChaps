@@ -1,6 +1,9 @@
 #include "CrewDragon.h"
 
-CrewDragon::CrewDragon() {}
+CrewDragon::CrewDragon(int weight, int numpeople) : Spacecraft(weight)
+{
+    this->numpeople = numpeople;
+}
 
 void CrewDragon::setNumpeople(int numPeople) {
     this->numPeople = numPeople;
