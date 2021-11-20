@@ -1,20 +1,40 @@
+/**THE COMPONENT**/
+/**THE SUBJECT**/
+
 #ifndef CARGO_H
 #define CARGO_H
+#include "RocketBuilder.h"
+#include "Observer.h"
+#include <iostream>
+#include <vector>
 
-class Cargo : RocketBuilder {
+using namespace std;
+
+/**
+ * Note:   A Dragon Spacecraft can only take cargo.  No hoomans allowed.
+ */
+
+class Cargo : public RocketBuilder
+{
+private:
+    int numSatellites;
 
 public:
-	int numSatellites;
-
 	Cargo();
-
-	void add(Cargo* cargo);
-
-	void setNumSat();
-
+    ~Cargo();
+	virtual void add(Cargo* cargo) = 0;
+	void setNumSat(int);
 	int getNumSat();
+    virtual void print() = 0;
 
-	void operation();
+    //OBSERVER DESIGN PATTERN
+    void attach(Observer*);
+    void detach(Observer*);
+    void notify();
+
+private:
+    //OBSERVER DESIGN PATTERN
+    vector<Observer*> observerList;
 };
 
 #endif

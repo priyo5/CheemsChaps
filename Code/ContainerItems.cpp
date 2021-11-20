@@ -1,11 +1,55 @@
 #include "ContainerItems.h"
 
-void ContainerItems::CreateSatelite() {
-	// TODO - implement ContainerItems::CreateSatelite
-	throw "Not yet implemented";
+using namespace std;
+ContainerItems::ContainerItems()
+{
+    this->container = nullptr;
 }
 
-void ContainerItems::CreateStarlink() {
-	// TODO - implement ContainerItems::CreateStarlink
-	throw "Not yet implemented";
+ContainerItems::~ContainerItems() {}
+
+//Getters
+Cargo* ContainerItems::getCargo()
+{
+    return this->container;
+}
+
+/**
+ * DECORATOR DESIGN PATTERN FUNCTIONS
+ * @param items
+ */
+
+void ContainerItems::add(Cargo *items)
+{
+    if(this->container == nullptr)
+    {
+        //Set the cargo to point to the new item
+        //Then set the new number of satellites
+        this->container = items;
+        this->container->setNumSat(items->getNumSat()); //Setting the number of the containers satellites
+    }
+    else
+    {
+        //Basically do nothing since the items have already been added.
+        this->container->add(items);
+    }
+}
+
+void ContainerItems::print()
+{
+    cout << "There are " << this->container->getNumSat() << " Satellites in this container." << endl;
+}
+
+/**OBSERVER DESIGN PATTERN FUNCTIONS**/
+
+//Getting the state of the subject
+bool ContainerItems::hasArrived()
+{
+    return this->arrived;
+}
+
+//Setting the state of the subject
+void ContainerItems::setArrived(bool arr)
+{
+    this->arrived = arr;
 }
