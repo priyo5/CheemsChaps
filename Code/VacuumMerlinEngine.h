@@ -1,13 +1,15 @@
 #ifndef VACUUMMERLINENGINE_H
 #define VACUUMMERLINENGINE_H
 
-class VacuumMerlinEngine : Engine {
+#include "Engine.h"
 
+class VacuumMerlinEngine : public Engine 
+{
+	public:
+		VacuumMerlinEngine();
+		virtual void setDepletionRate(int d);
 
-protected:
-	void setDepletionRate();
-
-	void fuelDepletion();
+	protected:
+		virtual void fuelDepletion();
 };
-
 #endif

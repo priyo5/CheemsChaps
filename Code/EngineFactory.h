@@ -1,13 +1,12 @@
 #ifndef ENGINEFACTORY_H
 #define ENGINEFACTORY_H
 
-class EngineFactory : RocketBuilder {
+#include "Engine.h"
 
-
-public:
-	void CreateMerlinEngine();
-
-	void CreateVacuumMerlinEngine();
+class EngineFactory
+{
+	public:
+		Engine* createEngine();
+		virtual Engine* makeEngine() = 0;
 };
-
 #endif
