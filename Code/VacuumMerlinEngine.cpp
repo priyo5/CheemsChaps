@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "VacuumMerlinEngine.h"
 
 #include <iostream>
@@ -18,16 +17,3 @@ void VacuumMerlinEngine::fuelDepletion()
 	deplete();
 	cout<<getD()<<" Litres of Fuel was depleted there is "<<getFuel()<<" litres left"<<endl;
 }
-=======
-#include "VacuumMerlinEngine.h"
-
-void VacuumMerlinEngine::setDepletionRate() {
-	// TODO - implement VacuumMerlinEngine::setDepletionRate
-	throw "Not yet implemented";
-}
-
-void VacuumMerlinEngine::fuelDepletion() {
-	// TODO - implement VacuumMerlinEngine::fuelDepletion
-	throw "Not yet implemented";
-}
->>>>>>> main

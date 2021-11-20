@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef ROCKETTYPEFACTORY_H
 #define ROCKETTYPEFACTORY_H
 
@@ -11,18 +10,3 @@ class RocketTypeFactory
 		virtual RocketTypes* makeRocketType() = 0;
 };
 #endif
-=======
-#ifndef ROCKETTYPEFACTORY_H
-#define ROCKETTYPEFACTORY_H
-
-class RocketTypeFactory : RocketBuilder {
-
-
-public:
-	void CreateFalcon9();
-
-	void CreateFalconHeavy();
-};
-
-#endif
->>>>>>> main

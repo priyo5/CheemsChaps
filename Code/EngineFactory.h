@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef ENGINEFACTORY_H
 #define ENGINEFACTORY_H
 
@@ -11,18 +10,3 @@ class EngineFactory
 		virtual Engine* makeEngine() = 0;
 };
 #endif
-=======
-#ifndef ENGINEFACTORY_H
-#define ENGINEFACTORY_H
-
-class EngineFactory : RocketBuilder {
-
-
-public:
-	void CreateMerlinEngine();
-
-	void CreateVacuumMerlinEngine();
-};
-
-#endif
->>>>>>> main

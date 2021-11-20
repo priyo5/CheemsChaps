@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef VACUUMMERLINENGINE_H
 #define VACUUMMERLINENGINE_H
 
@@ -14,18 +13,3 @@ class VacuumMerlinEngine : public Engine
 		virtual void fuelDepletion();
 };
 #endif
-=======
-#ifndef VACUUMMERLINENGINE_H
-#define VACUUMMERLINENGINE_H
-
-class VacuumMerlinEngine : Engine {
-
-
-protected:
-	void setDepletionRate();
-
-	void fuelDepletion();
-};
-
-#endif
->>>>>>> main
