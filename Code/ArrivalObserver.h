@@ -1,3 +1,4 @@
+
 /**Concrete Observer**/
 
 #ifndef ARRIVALOBSERVER_H

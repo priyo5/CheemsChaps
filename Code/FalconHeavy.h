@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef FALCONHEAVY_H
 #define FALCONHEAVY_H
 
@@ -9,3 +10,12 @@ class FalconHeavy : public RocketTypes
         FalconHeavy(MerlinEngine *,VacuumMerlinEngine *);
 };
 #endif
+=======
+#ifndef FALCONHEAVY_H
+#define FALCONHEAVY_H
+
+class FalconHeavy : RocketTypes {
+};
+
+#endif
+>>>>>>> main
