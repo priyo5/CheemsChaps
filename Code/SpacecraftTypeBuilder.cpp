@@ -2,6 +2,7 @@
 #include "SpacecraftFactory.h"
 #include "CrewDragonFactory.h"
 #include "DragonSpacecraftFactory.h"
+#include <string>
 
 using namespace std;
 
@@ -22,6 +23,7 @@ Spacecraft* SpacecraftTypeBuilder::BuildSpacecraftType(String type, int weight, 
 /**Dragon**/
 Spacecraft* SpacecraftTypeBuilder::BuildSpacecraftType(String type, int weight, string sat_type)
 {
-    Spacecraft* final_spacecraft = dragonFact->startSpacecraftFactory(weight, sat_type);
+    DragonSpacecraft* final_spacecraft = dragonFact->startSpacecraftFactory(weight, sat_type);
+    final_spacecraft->setCargo(int weight, string sat_type);
     return final_spacecraft;
 }

@@ -10,25 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a38c600a-1524-4ba5-a8c0-f1da4d622a68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RocketBuilder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrewDragon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CrewDragon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrewDragon.h" beforeDir="false" afterPath="$PROJECT_DIR$/CrewDragon.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrewDragonFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CrewDragonFactory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrewDragonFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/CrewDragonFactory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DragonSpacecraft.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DragonSpacecraft.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DragonSpacecraft.h" beforeDir="false" afterPath="$PROJECT_DIR$/DragonSpacecraft.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DragonSpacecraftFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DragonSpacecraftFactory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rocket.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Rocket.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rocket.h" beforeDir="false" afterPath="$PROJECT_DIR$/Rocket.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RocketBuilder.h" beforeDir="false" afterPath="$PROJECT_DIR$/RocketBuilder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RocketTypeBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RocketTypeBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spacecraft.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Spacecraft.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpacecraftFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/SpacecraftFactory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RocketBuilder.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spacecraft.h" beforeDir="false" afterPath="$PROJECT_DIR$/Spacecraft.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpacecraftTypeBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SpacecraftTypeBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpacecraftTypeBuilder.h" beforeDir="false" afterPath="$PROJECT_DIR$/SpacecraftTypeBuilder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cos 214 Project Diagrams.vpp.bak_001d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cos 214 Project Diagrams.vpp.bak_002d" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
