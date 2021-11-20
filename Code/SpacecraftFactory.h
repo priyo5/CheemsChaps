@@ -1,13 +1,14 @@
 #ifndef SPACECRAFTFACTORY_H
 #define SPACECRAFTFACTORY_H
 
-class SpacecraftFactory : RocketBuilder {
+#include "RocketBuilder.h"
+#include "Spacecraft.h"
 
-
+class SpacecraftFactory : public RocketBuilder {
 public:
-	void CreateCrewDragon();
-
-	void CreateDragonSpacecraft();
+	Spacecraft* startSpacecraftFactory();
+protected:
+	virtual Spacecraft* createSpacecraft()=0;
 };
 
 #endif

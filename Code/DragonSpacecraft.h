@@ -1,10 +1,16 @@
 #ifndef DRAGONSPACECRAFT_H
 #define DRAGONSPACECRAFT_H
 
-class DragonSpacecraft : Spacecraft {
+#include "Spacecraft.h"
+#include "Cargo.h"
 
+class DragonSpacecraft : public Spacecraft {
+public:
+	DragonSpacecraft();
+	void setCargo(Cargo* cargo);
+	Cargo* getCargo();
 private:
-	Cargo** cargo;
+	Cargo* cargo;
 };
 
 #endif
