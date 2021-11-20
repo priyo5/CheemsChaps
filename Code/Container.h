@@ -4,7 +4,7 @@
 #define CONTAINER_H
 #include "Cargo.h"
 
-class Container : Cargo
+class Container : public Cargo
 {
 public:
     Container();

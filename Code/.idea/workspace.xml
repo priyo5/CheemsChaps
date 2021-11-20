@@ -10,16 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a38c600a-1524-4ba5-a8c0-f1da4d622a68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Satellite.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Starlink.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Container.h" beforeDir="false" afterPath="$PROJECT_DIR$/Container.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ContainerItems.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerItems.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ContainerItems.h" beforeDir="false" afterPath="$PROJECT_DIR$/ContainerItems.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Command.h" beforeDir="false" afterPath="$PROJECT_DIR$/Command.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DragonSpacecraft.h" beforeDir="false" afterPath="$PROJECT_DIR$/DragonSpacecraft.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Satellite.h" beforeDir="false" afterPath="$PROJECT_DIR$/Satellite.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rocket.h" beforeDir="false" afterPath="$PROJECT_DIR$/Rocket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Satellite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Satellite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spacecraft.h" beforeDir="false" afterPath="$PROJECT_DIR$/Spacecraft.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Starlink.h" beforeDir="false" afterPath="$PROJECT_DIR$/Starlink.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cos 214 Project Diagrams.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Cos 214 Project Diagrams.vpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
@@ -68,7 +70,9 @@
       <workItem from="1636539981053" duration="5473000" />
       <workItem from="1637065079776" duration="1959000" />
       <workItem from="1637125852485" duration="1427000" />
-      <workItem from="1637156505458" duration="4985000" />
+      <workItem from="1637156505458" duration="5039000" />
+      <workItem from="1637163300821" duration="1674000" />
+      <workItem from="1637216995520" duration="2432000" />
     </task>
     <servers />
   </component>
@@ -85,5 +89,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -6,16 +6,18 @@ ContainerItems::ContainerItems()
     this->container = nullptr;
 }
 
-ContainerItems::~ContainerItems()
-{
-    delete this->container;
-}
+ContainerItems::~ContainerItems() {}
 
 //Getters
 Cargo* ContainerItems::getCargo()
 {
     return this->container;
 }
+
+/**
+ * DECORATOR DESIGN PATTERN FUNCTIONS
+ * @param items
+ */
 
 void ContainerItems::add(Cargo *items)
 {
@@ -24,7 +26,7 @@ void ContainerItems::add(Cargo *items)
         //Set the cargo to point to the new item
         //Then set the new number of satellites
         this->container = items;
-        //setNumSat(items->getNumSat());
+        this->container->setNumSat(items->getNumSat()); //Setting the number of the containers satellites
     }
     else
     {
@@ -35,6 +37,19 @@ void ContainerItems::add(Cargo *items)
 
 void ContainerItems::print()
 {
-
+    cout << "There are " << this->container->getNumSat() << " Satellites in this container." << endl;
 }
 
+/**OBSERVER DESIGN PATTERN FUNCTIONS**/
+
+//Getting the state of the subject
+bool ContainerItems::hasArrived()
+{
+    return this->arrived;
+}
+
+//Setting the state of the subject
+void ContainerItems::setArrived(bool arr)
+{
+    this->arrived = arr;
+}
