@@ -1,11 +1,16 @@
 #ifndef ROCKETTYPES_H
 #define ROCKETTYPES_H
 
-class RocketTypes {
+#include "MerlinEngine.h"
+#include "VacuumMerlinEngine.h"
 
-private:
-	MerlinEngine* Stage1;
-	MerlinVacuumEngine* Stage2;
+class RocketTypes 
+{
+	private:
+		MerlinEngine* Stage1;
+		VacuumMerlinEngine* Stage2;
+	
+	public:
+		RocketTypes(MerlinEngine *,VacuumMerlinEngine *);
 };
-
 #endif
