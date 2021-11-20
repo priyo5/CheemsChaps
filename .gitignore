@@ -1,3 +1,16 @@
 #VP backup files
 *.bak*
 *.lck
+
+*.DS_Store
+.idea/
+cmake-build-debug/
+CMakeLists.txt
+/.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/CheemsChaps/v16/.suo
+.vs/VSWorkspaceState.json
+Code/.idea/Code.iml
+.gitignore
+Code/.idea/modules.xml
+Code/.idea/vcs.xml

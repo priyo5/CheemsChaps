@@ -1,7 +1,11 @@
 #ifndef FALCON9_H
 #define FALCON9_H
 
-class Falcon9 : RocketTypes {
-};
+#include "RocketTypes.h"
 
+class Falcon9 : public RocketTypes
+{
+    public:
+        Falcon9(MerlinEngine *,VacuumMerlinEngine *);
+};
 #endif

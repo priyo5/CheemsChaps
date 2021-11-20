@@ -1,19 +1,18 @@
 #ifndef ROCKETBUILDER_H
 #define ROCKETBUILDER_H
 
+#include "State.h"
+#include <string>
+
+using namespace std;
+
 class RocketBuilder {
-
-
 public:
-	void BuildRocket();
+	virtual void BuildRocketType(string) = 0;
 
-	void BuildRocketType();
+	virtual void BuildSpacecraftType(int) = 0;
 
-	void BuildStage();
-
-	void BuildSpacecraft();
-
-	void BuildCargo();
+	virtual void BuildEngineType(string) = 0;
 };
 
 #endif

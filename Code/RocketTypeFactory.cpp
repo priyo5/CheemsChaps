@@ -1,11 +1,8 @@
 #include "RocketTypeFactory.h"
 
-void RocketTypeFactory::CreateFalcon9() {
-	// TODO - implement RocketTypeFactory::CreateFalcon9
-	throw "Not yet implemented";
-}
+using namespace std;
 
-void RocketTypeFactory::CreateFalconHeavy() {
-	// TODO - implement RocketTypeFactory::CreateFalconHeavy
-	throw "Not yet implemented";
+RocketTypes* RocketTypeFactory::createRocketType()
+{
+	return makeRocketType();
 }
