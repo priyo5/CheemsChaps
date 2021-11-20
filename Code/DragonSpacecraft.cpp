@@ -4,7 +4,7 @@
 #include "Starlink.h"
 #include "Cargo.h"
 
-DragonSpacecraft::DragonSpacecraft()
+DragonSpacecraft::DragonSpacecraft(int weight) : Spacecraft(weight)
 {
     cargo = nullptr;
 }

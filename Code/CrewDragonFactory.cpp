@@ -2,5 +2,6 @@
 
 Spacecraft* CrewDragonFactory::createSpacecraft(int weight, int numPeople)
 {
-    return new CrewDragon(int weight, int numPeople);
+    Spacecraft* crew = new CrewDragon(weight, numPeople);
+    return crew;
 }

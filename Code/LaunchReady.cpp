@@ -1,9 +1,9 @@
 #include "LaunchReady.h"
 #include "State.h"
 
-using namespace std;
-
 #include <iostream>
+
+using namespace std;
 
 void LaunchReady::handleLaunch(){
     if (this->passedTest)

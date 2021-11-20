@@ -1,12 +1,13 @@
 #ifndef STATE_H
 #define STATE_H
 
-class State {
+class State
+        {
 	public:
 		void virtual handleLaunch() = 0;
 		void virtual handleStaticFireTest() = 0;
-		bool passedTest = false;
-		bool Launched = false;
+		bool passedTest;
+		bool Launched;
 };
 
 #endif

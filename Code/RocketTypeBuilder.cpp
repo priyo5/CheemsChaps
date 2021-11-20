@@ -1,9 +1,10 @@
 #include "RocketTypeBuilder.h"
+#include "RocketTypes.h"
 #include <string>
 
 using namespace std;
 
-void RocketTypeBuilder::BuildRocketType(string type)
+RocketTypes* RocketTypeBuilder::BuildRocketType(string type)
 {
     if (type == "Falcon9")
     {

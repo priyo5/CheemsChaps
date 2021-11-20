@@ -2,14 +2,13 @@
 #include "SpacecraftTypeBuilder.h"
 #include "EngineTypeBuilder.h"
 #include "RocketTypeBuilder.h"
-#include "LaunchReady.h""
+#include "LaunchReady.h"
 
 Rocket::Rocket()
 {
-    this->RocketBuild = new RocketBuilder();
     this->spacecraftTypeBuilder = new SpacecraftTypeBuilder();
-    this->engineTypeBuilder = new EngineTypeBuildere();
-    this->rocketTypeBuilder = new RocketTypeBuilderket();
+    this->engineTypeBuilder = new EngineTypeBuilder();
+    this->rocketTypeBuilder = new RocketTypeBuilder();
 }
 
 void Rocket::Launch(){

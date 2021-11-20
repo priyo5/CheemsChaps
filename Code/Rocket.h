@@ -19,11 +19,11 @@ public:
     void BuildSpaceCraft(string, int, string sat_type); //Dragon
 
 private:
-    RocketBuilder* RocketBuild;
     State* state;
 
     //Variables (parts) that the Rocket contains
     Spacecraft* spacecraft;
+
 
     //Builders
     SpacecraftTypeBuilder* spacecraftTypeBuilder;

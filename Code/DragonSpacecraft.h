@@ -9,7 +9,7 @@
 class DragonSpacecraft : public Spacecraft
 {
 public:
-	DragonSpacecraft();
+	DragonSpacecraft(int);
 	void setCargo(int weight, string sat_type);
 	ContainerItems* getCargo();
     ArrivalObserver* getObserver();

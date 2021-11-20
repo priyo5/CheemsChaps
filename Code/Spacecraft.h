@@ -5,10 +5,11 @@
 #include "ContainerItems.h"
 
 using namespace std;
-
-class Spacecraft {
+class ContainerItems;
+class Spacecraft
+{
 public:
-	Spacecraft();
+	Spacecraft(int);
 	void setWeight(int);
     virtual ContainerItems* getCargo() = 0;
 protected:

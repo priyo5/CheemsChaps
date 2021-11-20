@@ -1,5 +1,4 @@
 /**Concrete Observer**/
-
 #include "ArrivalObserver.h"
 #include "ContainerItems.h"
 #include "Satellite.h"

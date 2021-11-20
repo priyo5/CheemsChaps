@@ -4,6 +4,7 @@
 #include "RocketBuilder.h"
 #include "SpacecraftFactory.h"
 #include "Spacecraft.h"
+#include <string>
 
 using namespace std;
 
@@ -11,8 +12,8 @@ class SpacecraftTypeBuilder : public RocketBuilder
 {
 public:
     SpacecraftTypeBuilder();
-    Spacecraft* BuildSpacecraftType(String t, int w, int numPeople); //crew
-    Spacecraft* BuildSpacecraftType(String t, int w, string sat_type); //dragon
+    Spacecraft* BuildSpacecraftType(string t, int w, int numPeople); //crew
+    Spacecraft* BuildSpacecraftType(string t, int w, string sat_type); //dragon
 
 private:
     SpacecraftFactory* crewFact;

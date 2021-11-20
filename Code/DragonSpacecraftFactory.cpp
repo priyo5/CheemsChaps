@@ -1,6 +1,6 @@
 #include "DragonSpacecraftFactory.h"
 
-Spacecraft* DragonSpacecraftFactory::createSpacecraft()
+Spacecraft* DragonSpacecraftFactory::createSpacecraft(int weight)
 {
-    return new DragonSpacecraft();
+    return new DragonSpacecraft(weight);
 }

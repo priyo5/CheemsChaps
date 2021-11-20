@@ -2,11 +2,12 @@
 #define RTBuilder_H
 
 #include "RocketBuilder.h"
+#include "RocketTypes.h"
 
 class RocketTypeBuilder
 {
 public:
-    void BuildRocketType(string Type);
+    RocketTypes* BuildRocketType(string Type);
 };
 
 #endif

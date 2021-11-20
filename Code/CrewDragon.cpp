@@ -2,7 +2,7 @@
 
 CrewDragon::CrewDragon(int weight, int numpeople) : Spacecraft(weight)
 {
-    this->numpeople = numpeople;
+    this->numPeople = numpeople;
 }
 
 void CrewDragon::setNumpeople(int numPeople) {

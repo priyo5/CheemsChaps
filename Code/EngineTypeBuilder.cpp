@@ -1,9 +1,10 @@
 #include "EngineTypeBuilder.h"
+#include "Engine.h"
 
 #include <iostream>
 using namespace std;
 
-void EngineTypeBuilder::BuildEngineType(string engineType){
+Engine* EngineTypeBuilder::BuildEngineType(string engineType){
     if (engineType == "Merlin")
     {
        //create appropriate engine with factory
