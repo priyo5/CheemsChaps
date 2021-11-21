@@ -43,7 +43,7 @@ void Rocket::BuildRocket(int type)
     }
     else //Starlink
     {
-        RocketBuild = new SateliteRocketBuilder();
+        RocketBuild = new StarlinkRocketBuilder();
         RocketBuild->BuildRocketType();
         RocketBuild->BuildSpacecraftType(0, "starlink");
     }
