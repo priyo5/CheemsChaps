@@ -26,7 +26,7 @@ int Engine::getFuel()
 	return Fuel;
 }
 
-void Engine::setDepletion(double d) 
+void Engine::setDepletion(int d)
 {
 	this->depletion = d;
 }

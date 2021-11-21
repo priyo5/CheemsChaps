@@ -1,3 +1,5 @@
+#define underline "\033[4m"
+#define sunderline "\033[0m"
 #include <iostream>
 #include "Rocket.h"
 #include "Launch.h"
@@ -11,13 +13,29 @@ using namespace std;
 
 int main()
 {
-    Rocket* rocket = new Rocket();
+     Rocket* rocket = new Rocket();
+     int type = 0;
+     int destination = 0;
 
-    // int type = 0;
-    // cout << "What purpose would you like your Rocket to have?\n0-Transport people\n1-Transport a single Satellite\n2-Transport a Starlink fleet" << endl;
-    // cin >> type;
-    
-    rocket->BuildRocket(0);
+     /** ASKING THE USER WHAT ROCKET HE WANTS TO BUILD**/
+     cout <<underline<<"\nCHOOSE YOUR ROCKET!\n" <<sunderline;
+
+    cout << "Which planet is your destination?\n\n0-Mars (37856000000Km) \n1-Jupiter (74817000000Km)\n2-The Moon (384400Km)" << endl;
+    cin >> destination;
+
+     cout << "What purpose would you like your Rocket to have?\n0-Transport people\n1-Transport a single Satellite\n2-Transport a Starlink fleet\n" << endl;
+     cin >> type;
+
+     rocket->BuildRocket(type);
+
+     rocket->setDestination(destination);
+     cout << "\n";
+
+     rocket->printRocket();
+     rocket->hasArrive();
+     rocket->arrive();
+     rocket->hasArrive();
+    /*************************************************/
 
     // Launch *launch = new Launch(rocket);
     // StaticFire *staticFire = new StaticFire(rocket);
@@ -27,9 +45,9 @@ int main()
     // aoo -> PressL();
     // aoo -> PressS();
 
-    RocketCaretaker* RStore = new RocketCaretaker();
+    //RocketCaretaker* RStore = new RocketCaretaker();
 
-    RStore -> setMemento(rocket -> makeMemento());
+    //RStore -> setMemento(rocket -> makeMemento());
 
     // cout << "Rocket's current fuel before use: " << rocket -> getFuel() << endl;
 
@@ -42,8 +60,6 @@ int main()
     // cout << "Rocket's current fuel after restore: " << rocket -> getFuel() << endl;
 
 
-
-    // cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl;
     
 //    rocket->BuildRocket(2);
 //    cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl;

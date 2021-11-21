@@ -18,9 +18,12 @@ public:
     int getNumSats();
     ContainerItems* getCargo();
     ArrivalObserver* getObserver();
+
+    //Setters
     void setCargo(ContainerItems*);
     void setObserver(ArrivalObserver*);
     void setNumSats(int num);
+    void setNumPeople(int num);
 
 private:
     int numPeople;
