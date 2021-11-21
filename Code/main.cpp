@@ -1,5 +1,11 @@
 #include <iostream>
 #include "Rocket.h"
+#include "Launch.h"
+#include "StaticFire.h"
+#include "ControlBoard.h"
+#include "RocketCaretaker.h"
+#include "RocketMemento.h"
+#include "RocketState.h"
 
 using namespace std;
 
@@ -11,8 +17,33 @@ int main()
     // cout << "What purpose would you like your Rocket to have?\n0-Transport people\n1-Transport a single Satellite\n2-Transport a Starlink fleet" << endl;
     // cin >> type;
     
-    rocket->BuildRocket(1);
-    cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl;
+    rocket->BuildRocket(0);
+
+    // Launch *launch = new Launch(rocket);
+    // StaticFire *staticFire = new StaticFire(rocket);
+
+    // ControlBoard *aoo = new ControlBoard(launch, staticFire);
+
+    // aoo -> PressL();
+    // aoo -> PressS();
+
+    RocketCaretaker* RStore = new RocketCaretaker();
+
+    RStore -> setMemento(rocket -> makeMemento());
+
+    // cout << "Rocket's current fuel before use: " << rocket -> getFuel() << endl;
+
+    // rocket -> setFuel(5);
+
+    // cout << "Rocket's current fuel after use: " << rocket -> getFuel() << endl;
+    
+    // rocket -> restore(RStore -> getMemento());
+
+    // cout << "Rocket's current fuel after restore: " << rocket -> getFuel() << endl;
+
+
+
+    // cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl;
     
 //    rocket->BuildRocket(2);
 //    cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl;

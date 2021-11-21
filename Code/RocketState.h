@@ -9,19 +9,15 @@ using namespace std;
 class RocketState
 {
 private:
-    
-    //These will change depending on what Ruben implements
-    string Rname;
-    int Rfuel;
-    int RnumEngines;
+    int DestinationDistance;
+    int RemainingFuel;
 
 public:
 
-    RocketState(string Rname, int Rfuel, int RnumEngines);
+    RocketState(int DestinationDistance, int RemainingFuel);
 
-    string getName(){return this -> Rname;};
-    int getFuel(){return this -> Rfuel;};
-    int getEngines(){return this -> RnumEngines;};
+    int getRemainingFuel(){return this -> RemainingFuel;};
+    int getDestinationDistance(){return this -> DestinationDistance;};
 };
 
 #endif

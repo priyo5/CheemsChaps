@@ -17,22 +17,20 @@ private:
     friend class Rocket;
 
     //All of these are subject to change depending on Ruben's implementation
-    string name;
-    int fuel;
-    int numEngines;
+    int DestinationDistance;
+    int RemainingFuel;
 
     RocketState* rstate;
 
     //Once again, these are subject to change
-    string getName(){return this -> name;};
-    int getFuel(){return this -> fuel;};
-    int getEngines(){return this -> numEngines;};
+    int getRemainingFuel(){return this -> RemainingFuel;};
+    int getDestinationDistance(){return this -> DestinationDistance;};
 
     RocketState* getState(){return this -> rstate;};
 
 public:
     //This is subject to change too
-    RocketMemento(string n, int f, int ne, RocketState* rs);
+    RocketMemento(int rf, int dd, RocketState* rs);
 };
 
 #endif

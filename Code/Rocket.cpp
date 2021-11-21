@@ -3,12 +3,16 @@
 
 void Rocket::Launch()
 {
-    state->handleLaunch();
+    // state->handleLaunch();
+
+    this -> getRocketTypes() -> getStage1() -> FireEngine();
 }   
 
 void Rocket::StaticFire()
 {
-    state->handleStaticFireTest();
+    // state->handleStaticFireTest();
+
+    cout << "Static Fire" << endl;
 }
 
 //Getters
@@ -47,4 +51,24 @@ void Rocket::BuildRocket(int type)
         RocketBuild->BuildRocketType();
         RocketBuild->BuildSpacecraftType(0, "starlink");
     }
+}
+
+
+RocketMemento* Rocket::makeMemento()
+{
+    RocketState* rstate = new RocketState(DestinationDistance, RemainingFuel);
+
+    return new RocketMemento(DestinationDistance, RemainingFuel, rstate);
+}
+
+RocketState* Rocket::getState()
+{
+    return rstate;
+}
+
+void Rocket::restore(RocketMemento* rm)
+{
+    rstate = rm -> getState();
+    DestinationDistance = rm -> getState() -> getDestinationDistance();
+    RemainingFuel = rm -> getState() -> getRemainingFuel();
 }

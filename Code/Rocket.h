@@ -8,6 +8,7 @@
 #include "LaunchReady.h"
 #include "State.h"
 #include "Spacecraft.h"
+#include "RocketMemento.h"
 
 using namespace std;
 
@@ -24,6 +25,11 @@ public:
     //Build the rocket
     void BuildRocket(int type);
 
+    //Memento
+    RocketState* getState();
+    RocketMemento* makeMemento();
+    void restore(RocketMemento* rm);
+
 private:
     State* state;
 
@@ -33,5 +39,8 @@ private:
 
     //Builders
     RocketBuilder* RocketBuild;
+
+    //Memento Pattern
+    RocketState* rstate;
 };
 #endif
