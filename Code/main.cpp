@@ -1,5 +1,7 @@
 #include <iostream>
-#include "Rocket_Builder/Rocket.h"
+#include "Rocket.h"
+
+using namespace std;
 
 int main()
 {
@@ -8,7 +10,7 @@ int main()
     int type = 0;
     cout << "What purpose would you like your Rocket to have?\n0-Transport people\n1-Transport a single Satellite\n2-Transport a Starlink fleet" << endl;
     cin >> type;
-
+    
     rocket->BuildRocket(type);
 
     //Daniel - Testing filling tempContainer with container items
