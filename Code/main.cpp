@@ -1,17 +1,17 @@
 #include <iostream>
-#include "Rocket.h"
-#include "RocketBuilder.h"
-#include "Cargo.h"
-#include "Container.h"
-#include "ContainerItems.h"
-#include "Starlink.h"
-#include "Satellite.h"
-#include "Observer.h"
-#include "ArrivalObserver.h"
+#include "./Rocket_Builder/Rocket.h"
+#include "./Rocket_Builder/RocketBuilder.h"
+#include "./Cargo/Cargo.h"
+#include "./Cargo/Container.h"
+#include "./Cargo/ContainerItems.h"
+#include "./Cargo/Starlink.h"
+#include "./Cargo/Satellite.h"
+#include "./Cargo/Observer.h"
+#include "./Cargo/ArrivalObserver.h"
 
 int main()
 {
-    Rocket* rocket = new Rocket();
+    // Rocket* rocket = new Rocket();
 
     //Rocket variables
 
@@ -33,7 +33,7 @@ int main()
     {
         cout << "num people?" << endl;
         cin >> numPeople;
-        rocket->BuildSpaceCraft("crew", weight, numPeople);
+        // rocket->BuildSpaceCraft("crew", weight, numPeople);
     }
     else //Dragon
     {
@@ -41,11 +41,11 @@ int main()
         cin >> sat_type;
         if(sat_type == 0) //Starlink
         {
-            rocket->BuildSpaceCraft("dragon", weight, "starlink");
+            // rocket->BuildSpaceCraft("dragon", weight, "starlink");
         }
         else //Single satellite
         {
-            rocket->BuildSpaceCraft("dragon", weight, "satellite");
+            // rocket->BuildSpaceCraft("dragon", weight, "satellite");
         }
     }
 
