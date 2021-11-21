@@ -30,6 +30,9 @@ public:
     RocketMemento* makeMemento();
     void restore(RocketMemento* rm);
 
+    //Fuel Function
+    void calculateDistancexFuel();
+
 private:
     State* state;
 

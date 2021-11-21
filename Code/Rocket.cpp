@@ -12,7 +12,7 @@ void Rocket::StaticFire()
 {
     // state->handleStaticFireTest();
 
-    cout << "Static Fire" << endl;
+    this -> getRocketTypes() -> getStage1() -> StaticFire();
 }
 
 //Getters
@@ -71,4 +71,18 @@ void Rocket::restore(RocketMemento* rm)
     rstate = rm -> getState();
     DestinationDistance = rm -> getState() -> getDestinationDistance();
     RemainingFuel = rm -> getState() -> getRemainingFuel();
+}
+
+void Rocket::calculateDistancexFuel()
+{
+    int func = (this -> DestinationDistance / 10);
+
+    if(this -> RemainingFuel < func)
+    {
+        cout << "The Rocket does not have enough fuel to get to it's destination." << endl;
+    }
+    else
+    {
+        cout << "The rocket has sufficient fuel in order to get to it's destination." << endl;
+    }
 }

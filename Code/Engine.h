@@ -11,7 +11,7 @@ class Engine
 	public:
 		Engine(int, int);
 		void FireEngine();
-		// void StaticFire();
+		void StaticFire();
 		int getFuel();
 		void deplete();
 		int getD();

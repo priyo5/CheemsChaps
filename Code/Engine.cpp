@@ -16,6 +16,11 @@ void Engine::FireEngine()
 	cout<<"Engines have ignited"<<endl;
 }
 
+void Engine::StaticFire() 
+{
+	cout<<"Static Fire commences."<<endl;
+}
+
 int Engine::getFuel() 
 {
 	return Fuel;
