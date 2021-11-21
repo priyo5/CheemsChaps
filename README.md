@@ -1,12 +1,4 @@
 <div id="top"></div>
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 <br />
 <div align="center">
   <a href="https://github.com/priyo5/CheemsChaps">
@@ -29,11 +21,11 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">10 Design Patterns Used</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">How to run our program</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -62,11 +54,11 @@ The 3 rockets you can build are:
 * Starlink Rocket: Falcon Heavy Rocket, Dragon Spacecraft with satellite with a stage 1 Merlin Engine and a stage 2 Vacuum Merlin Engine
 
 These will all have different extras
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
 <h3>10 Design Patterns used:</h3>
+
 * Builder
 * Template Method
 * Abstract Factory
@@ -78,45 +70,34 @@ These will all have different extras
 * Prototype
 * Composite
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
-## Getting Started
+## How to run our program
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+The code preferably needs to be ran on a linux or mac machine that has the following installed
+* gcc:
   ```sh
-  npm install npm@latest -g
+  sudo apt-get install gcc
   ```
+
+  * g++:
+    ```sh
+    sudo apt-get install g++
+    ```
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Here you can also see how you can clone our repo onto your machine
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/priyo5/CheemsChaps
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
