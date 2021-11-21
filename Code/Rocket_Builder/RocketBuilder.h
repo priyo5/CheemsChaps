@@ -13,13 +13,9 @@ using namespace std;
 class RocketBuilder
 {
 public:
-	virtual RocketTypes* BuildRocketType(string) = 0;
+	virtual RocketTypes* BuildRocketType() = 0;
 
-	virtual Spacecraft* BuildSpacecraftType(string, int, int numPeople) = 0; //crew for num people
-
-	virtual Spacecraft* BuildSpacecraftType(string, int, string sat_type) = 0; //sat for starlink or single satellite
-
-	virtual Engine* BuildEngineType(string) = 0;
+	virtual Spacecraft* BuildSpacecraftType(string type, int capacity, int numPeople,string sat_type)= 0; //crew for num people
 };
 
 #endif

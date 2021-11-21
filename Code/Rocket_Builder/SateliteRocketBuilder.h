@@ -3,8 +3,9 @@
 
 
 class SateliteRocketBuilder {
+    RocketTypes* BuildRocketType();
 
+    Spacecraft* BuildSpacecraftType(string type, int capacity, int numPeople,string sat_type); //crew for num people
 };
-
 
 #endif //SATELITEROCKETBUILDER_H
