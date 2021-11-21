@@ -15,7 +15,7 @@ class Engine
 		int getFuel();
 		void deplete();
 		int getD();
-		void setDepletion(double);
+		void setDepletion(int);
 		virtual void setDepletionRate(int d) = 0;
 
 	protected:

@@ -12,11 +12,6 @@ using namespace std;
 
 class ControlBoard
 {
-private:
-    //Pointers to the different Concrete Command Objects
-    Launch *L;
-	StaticFire *S;
-
 public:
     //A Constructor to initialise the ControlBoard with the Concrete Commands
 	ControlBoard(Launch *L, StaticFire *S);
@@ -26,6 +21,11 @@ public:
 
     //A *Button* used to press the StaticFire Button
 	void PressS();
+
+private:
+    //Pointers to the different Concrete Command Objects
+    Launch *L;
+    StaticFire *S;
 };
 
 #endif

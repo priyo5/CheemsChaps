@@ -13,17 +13,17 @@ void DragonSpacecraft::setCargo(string sat_type)
     //Decorating according the sat_type
     if(sat_type == "starlink")
     {
-        tempContainer->add(new Satellite());
+        tempContainer->add(new Starlink());
     }
     else //Satellite
     {
-        tempContainer->add(new Starlink());
+        tempContainer->add(new Satellite());
     }
 
     //Adding an observer
     ArrivalObserver* sat_1_Observer = new ArrivalObserver(tempContainer);
     tempContainer->attach(sat_1_Observer);
-    sat_1_Observer->print(); //Should be not arrived yet
+    //sat_1_Observer->print(); //Should be not arrived yet
 
     if(sat_type == "starlink")
         setNumSats(60);

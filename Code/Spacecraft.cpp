@@ -8,6 +8,7 @@ Spacecraft::Spacecraft(int numPeople, int cap, ContainerItems* cont, ArrivalObse
     this->cargo_monitor = arr;
 }
 
+//GETTERS
 int Spacecraft::getNumPeople()
 {
     return this->numPeople;
@@ -28,6 +29,8 @@ ArrivalObserver *Spacecraft::getObserver()
     return this->cargo_monitor;
 }
 
+
+//SETTERS
 void Spacecraft::setCargo(ContainerItems *c)
 {
     this->cargo = c;
@@ -41,4 +44,9 @@ void Spacecraft::setObserver(ArrivalObserver *AO)
 void Spacecraft::setNumSats(int num)
 {
     this->numSatellites = num;
+}
+
+void Spacecraft::setNumPeople(int num)
+{
+    this->numPeople = num;
 }
