@@ -1,11 +1,13 @@
 #include "DragonSpacecraft.h"
 
-DragonSpacecraft::DragonSpacecraft(int weight) : Spacecraft(weight)
+DragonSpacecraft::DragonSpacecraft(string sat_type) : Spacecraft()
 {
     cargo = nullptr;
+    setCargo(sat_type);
+
 }
 
-void DragonSpacecraft::setCargo(int weight, string sat_type)
+void DragonSpacecraft::setCargo(string sat_type)
 {
     ContainerItems * tempContainer;
     tempContainer = new ContainerItems();

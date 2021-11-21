@@ -5,9 +5,11 @@
 
 
 class PeopleRocketBuilder: public RocketBuilder  {
+public:
+
     RocketTypes* BuildRocketType();
 
-    Spacecraft* BuildSpacecraftType(string type, int capacity, int numPeople,string sat_type); //crew for num people
+    Spacecraft* BuildSpacecraftType(int numPeople,string sat_type); //crew for num people
 };
 
 

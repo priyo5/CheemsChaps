@@ -1,6 +1,12 @@
 #include "DragonSpacecraftFactory.h"
 
-Spacecraft* DragonSpacecraftFactory::createSpacecraft(int weight)
+Spacecraft* DragonSpacecraftFactory::createSpacecraft(string sat_type)
 {
-    return new DragonSpacecraft(weight);
+    Spacecraft* drag = new DragonSpacecraft(sat_type);
+    return drag;
+}
+
+Spacecraft* DragonSpacecraftFactory::createSpacecraft(int numPeople)
+{
+    return nullptr; //will not be used
 }

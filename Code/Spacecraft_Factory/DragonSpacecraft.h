@@ -12,8 +12,8 @@
 class DragonSpacecraft : public Spacecraft
 {
 public:
-	DragonSpacecraft(int);
-	void setCargo(int weight, string sat_type);
+	DragonSpacecraft(string);
+	void setCargo(string sat_type);
 	ContainerItems* getCargo();
     ArrivalObserver* getObserver();
 private:

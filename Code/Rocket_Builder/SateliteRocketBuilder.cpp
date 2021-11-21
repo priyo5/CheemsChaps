@@ -1,22 +1,15 @@
 #include "SateliteRocketBuilder.h"
-#include "../Engine_Factory/MerlinEngineFactory.h"
-#include "../Engine_Factory/VacuumMerlinEngineFactory.h"
-#include "../Rocket_Type_Factory/FalconHeavyFactory.h"
-#include "../Engine_Factory/Engine.h"
 
 #include <string>
 #include <iostream>
 
-using namespace  std;
-
 RocketTypes* SateliteRocketBuilder::BuildRocketType() {
-    MerlinEngineFactory* merFact = new MerlinEngineFactory();
-    VacuumMerlinEngine* vacmerFact = new VacuumMerlinEngine();
-
-    RocketTypeFactory* fhFact = new FalconHeavyFactory();
-
     Engine* s1 = merFact->makeEngine();
     Engine* s2 = vacmerFact->makeEngine();
 
     return  fhFact->createRocketType(s1,s2);;
+}
+
+Spacecraft* SateliteRocketBuilder::BuildSpacecraftType(int numPeople,string sat_type) {
+    return dragonFact->startSpacecraftFactory(sat_type);
 }

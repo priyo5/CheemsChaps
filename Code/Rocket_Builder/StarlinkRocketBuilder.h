@@ -1,11 +1,14 @@
 #ifndef STARLINKROCKETBUILDER_H
 #define STARLINKROCKETBUILDER_H
 
+#include "RocketBuilder.h"
 
-class StarlinkRocketBuilder {
+
+class StarlinkRocketBuilder : public  RocketBuilder{
+public:
     RocketTypes* BuildRocketType();
 
-    Spacecraft* BuildSpacecraftType(string type, int capacity, int numPeople,string sat_type); //crew for num people
+    Spacecraft* BuildSpacecraftType(int numPeople,string sat_type); //crew for num people
 };
 
 #endif //STARLINKROCKETBUILDER_H

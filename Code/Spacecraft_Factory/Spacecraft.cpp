@@ -1,10 +1,6 @@
 #include "Spacecraft.h"
 
-Spacecraft::Spacecraft(int weight)
+Spacecraft::Spacecraft()
 {
-    this->weight = weight;
-}
 
-void Spacecraft::setWeight(int weightTonnes) {
-    this->weight = weightTonnes;
 }

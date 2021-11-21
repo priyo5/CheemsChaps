@@ -10,11 +10,8 @@ class ContainerItems;
 class Spacecraft
 {
 public:
-	Spacecraft(int);
-	void setWeight(int);
+	Spacecraft();
     virtual ContainerItems* getCargo() = 0;
-protected:
-	int weight; // The weight of the payload in tonnes
 };
 
 #endif

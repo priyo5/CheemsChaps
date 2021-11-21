@@ -4,9 +4,12 @@
 #include "SpacecraftFactory.h"
 #include "CrewDragon.h"
 
+#include <string>
+
 class CrewDragonFactory : public SpacecraftFactory {
 protected:
-	Spacecraft* createSpacecraft(int weight, int numPeople);
+	Spacecraft* createSpacecraft(int numPeople);
+    Spacecraft* createSpacecraft(string sat_type);
 };
 
 #endif
