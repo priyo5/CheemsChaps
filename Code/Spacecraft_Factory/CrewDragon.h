@@ -8,13 +8,6 @@ class CrewDragon : public Spacecraft
 {
 public:
 	CrewDragon(int numPeople);
-	void setNumpeople(int);
-	void setCapacity(int);
-	int getNumpeople();
-	int getCapacity();
-private:
-	int numPeople;
-	int capacity;
 };
 
 #endif

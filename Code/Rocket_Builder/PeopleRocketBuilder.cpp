@@ -9,9 +9,19 @@ RocketTypes* PeopleRocketBuilder::BuildRocketType() {
     Engine* s1 = merFact->makeEngine();
     Engine* s2 = vacmurFact->makeEngine();
 
-    return  f9Fact->createRocketType(s1,s2);;
+    this->rockettype = f9Fact->createRocketType(s1,s2);
 }
 
 Spacecraft* PeopleRocketBuilder::BuildSpacecraftType(int numPeople,string sat_type) {
-    return crewfact->startSpacecraftFactory(numPeople);
+    this->spacecraft = crewfact->startSpacecraftFactory(numPeople);
+}
+
+RocketTypes *PeopleRocketBuilder::getRocketType()
+{
+    return this->rockettype;
+}
+
+Spacecraft *PeopleRocketBuilder::getSpacecraft()
+{
+    return this->spacecraft;
 }

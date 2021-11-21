@@ -4,10 +4,8 @@ using namespace  std;
 
 #include <iostream>
 
-CrewDragon::CrewDragon(int numpeople) : Spacecraft()
+CrewDragon::CrewDragon(int numpeople) : Spacecraft(numPeople, 20, nullptr, nullptr)
 {
-    this->setCapacity(20);
-    this->numPeople = numpeople;
     if  (numpeople > 20)
     {
         cout << "Twenty is the maximum number of people of allowed.\n";
@@ -15,20 +13,4 @@ CrewDragon::CrewDragon(int numpeople) : Spacecraft()
         cout << "We got rid of " << num << " people :)\n";
         setNumpeople(20);
     }
-}
-
-void CrewDragon::setNumpeople(int numPeople) {
-    this->numPeople = numPeople;
-}
-
-void CrewDragon::setCapacity(int capacity) {
-    this->capacity = capacity;
-}
-
-int CrewDragon::getNumpeople() {
-    return this->numPeople;
-}
-
-int CrewDragon::getCapacity() {
-    return this->capacity;
 }

@@ -14,11 +14,6 @@ class DragonSpacecraft : public Spacecraft
 public:
 	DragonSpacecraft(string);
 	void setCargo(string sat_type);
-	ContainerItems* getCargo();
-    ArrivalObserver* getObserver();
-private:
-	ContainerItems* cargo;
-    ArrivalObserver* cargo_monitor;
 };
 
 #endif

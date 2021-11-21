@@ -2,13 +2,12 @@
 #define SPACECRAFTFACTORY_H
 
 #include "Spacecraft.h"
-#include "../Rocket_Builder/RocketBuilder.h"
 #include <string>
 
 using namespace std;
 
 
-class SpacecraftFactory : public RocketBuilder
+class SpacecraftFactory
 {
 public:
 	Spacecraft* startSpacecraftFactory(int numPeople); //Crew

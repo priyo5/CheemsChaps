@@ -7,9 +7,19 @@ RocketTypes* StarlinkRocketBuilder::BuildRocketType() {
     Engine* s1 = merFact->makeEngine();
     Engine* s2 = vacmerFact->makeEngine();
 
-    return  fhFact->createRocketType(s1,s2);;
+    this->rockettype = fhFact->createRocketType(s1,s2);
 }
 
 Spacecraft* StarlinkRocketBuilder::BuildSpacecraftType(int numPeople,string sat_type) {
-    return dragonFact->startSpacecraftFactory(sat_type);
+    this->spacecraft = dragonFact->startSpacecraftFactory(sat_type);
+}
+
+RocketTypes *StarlinkRocketBuilder::getRocketType()
+{
+    return this->rockettype;
+}
+
+Spacecraft *StarlinkRocketBuilder::getSpacecraft()
+{
+    return this->spacecraft;
 }

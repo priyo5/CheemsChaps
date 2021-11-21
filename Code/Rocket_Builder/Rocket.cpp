@@ -1,11 +1,6 @@
 #include "Rocket.h"
 
-Rocket::Rocket()
-{
-    this->spacecraftTypeBuilder = new SpacecraftTypeBuilder();
-    this->engineTypeBuilder = new EngineTypeBuilder();
-    this->rocketTypeBuilder = new RocketTypeBuilder();
-}
+Rocket::Rocket(){}
 
 void Rocket::Launch(){
 	state->handleLaunch();
@@ -15,18 +10,38 @@ void Rocket::StaticFire() {
 	state->handleStaticFireTest();
 }
 
-//Building the parts of the rocket -
-/**CREW**/
-void Rocket::BuildSpaceCraft(string type, int weight, int numPeople)
+//Getters
+
+Spacecraft *Rocket::getSpacecraft()
 {
-    //Deffering the building of the spacecraft the concrete builder through the spacecraft factory
-    this->spacecraft = this->spacecraftTypeBuilder->BuildSpacecraftType(type, weight, numPeople);
+    return this->rock
 }
 
-//Building the parts of the rocket
-/**DRAGON**/
-void Rocket::BuildSpaceCraft(string type, int weight, string sat_type)
+//Actually building the rocket
+void Rocket::BuildRocket(int type)
 {
-    //Deffering the building of the spacecraft the concrete builder through the spacecraft factory
-    this->spacecraft = this->spacecraftTypeBuilder->BuildSpacecraftType(type, weight, sat_type);
+    if(type == 0)
+    {
+        int numPeople = 0;
+        cout << "How many people do you want to board the Rocket?" << endl;
+        cin >> numPeople;
+
+        RocketBuild = new PeopleRocketBuilder();
+        RocketBuild->BuildRocketType();
+        RocketBuild->BuildSpacecraftType(numPeople, "");
+    }
+    else if(type == 1)
+    {
+        RocketBuild = new SateliteRocketBuilder();
+        RocketBuild->BuildRocketType();
+        RocketBuild->BuildSpacecraftType(0, "satellite");
+
+    }
+    else //Starlink
+    {
+        RocketBuild = new SateliteRocketBuilder();
+        RocketBuild->BuildRocketType();
+        RocketBuild->BuildSpacecraftType(0, "starlink");
+
+    }
 }

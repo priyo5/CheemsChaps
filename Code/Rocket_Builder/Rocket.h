@@ -2,9 +2,9 @@
 #define ROCKET_H
 
 #include "RocketBuilder.h"
-#include "SpacecraftTypeBuilder.h"
-#include "EngineTypeBuilder.h"
-#include "RocketTypeBuilder.h"
+#include "PeopleRocketBuilder.h"
+#include "SateliteRocketBuilder.h"
+#include "StarlinkRocketBuilder.h"
 #include "../Memento/LaunchReady.h"
 #include "../Memento/State.h"
 #include "../Spacecraft_Factory/Spacecraft.h"
@@ -16,20 +16,23 @@ public:
     Rocket();
 	void Launch();
 	void StaticFire();
-    void BuildSpaceCraft(string, int, int numPeople); //Crew
-    void BuildSpaceCraft(string, int, string sat_type); //Dragon
+
+    //Getters
+    RocketTypes* getRocketTypes();
+    Spacecraft* getSpacecraft();
+
+    //Build the rocket
+    void BuildRocket(int type);
 
 private:
     State* state;
 
     //Variables (parts) that the Rocket contains
-    Spacecraft* spacecraft;
-
+    int DestinationDistance;
+    int RemainingFuel;
 
     //Builders
-    SpacecraftTypeBuilder* spacecraftTypeBuilder;
-    EngineTypeBuilder* engineTypeBuilder;
-    RocketTypeBuilder* rocketTypeBuilder;
+    RocketBuilder* RocketBuild;
 };
 
 #endif

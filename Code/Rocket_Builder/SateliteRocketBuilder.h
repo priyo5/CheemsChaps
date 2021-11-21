@@ -9,6 +9,14 @@ public:
     RocketTypes* BuildRocketType();
 
     Spacecraft* BuildSpacecraftType(int numPeople,string sat_type); //crew for num people
+
+    //Getters
+    RocketTypes* getRocketTypes();
+    Spacecraft* getSpacecraft();
+
+private:
+    RocketTypes* rockettype;
+    Spacecraft* spacecraft;
 };
 
 #endif //SATELITEROCKETBUILDER_H

@@ -1,57 +1,15 @@
 #include <iostream>
-#include "./Rocket_Builder/Rocket.h"
-#include "./Rocket_Builder/RocketBuilder.h"
-#include "./Cargo/Cargo.h"
-#include "./Cargo/Container.h"
-#include "./Cargo/ContainerItems.h"
-#include "./Cargo/Starlink.h"
-#include "./Cargo/Satellite.h"
-#include "./Cargo/Observer.h"
-#include "./Cargo/ArrivalObserver.h"
+#include "Rocket_Builder/Rocket.h"
 
 int main()
 {
-    // Rocket* rocket = new Rocket();
+    Rocket* rocket = new Rocket();
 
-    //Rocket variables
+    int type = 0;
+    cout << "What purpose would you like your Rocket to have?\n0-Transport people\n1-Transport a single Satellite\n2-Transport a Starlink fleet" << endl;
+    cin >> type;
 
-    //Spacecraft variables
-    int sc = 0; //Crew or Dragon
-    int numPeople = 0; //For crew only
-    int sat_type = 0; //For Dragon only
-    int weight = 0;
-
-    //Engine variables
-
-
-    cout << "What spacecraft? \n0-crew\n1-dragon\n" << endl;
-    cin >> sc;
-    cout << "What weight?"<< endl;
-    cin >> weight;
-
-    if(sc == 0) //Crew
-    {
-        cout << "num people?" << endl;
-        cin >> numPeople;
-        // rocket->BuildSpaceCraft("crew", weight, numPeople);
-    }
-    else //Dragon
-    {
-        cout << "Satellite type?\n0-starlink\n1-satellite\n" << endl;
-        cin >> sat_type;
-        if(sat_type == 0) //Starlink
-        {
-            // rocket->BuildSpaceCraft("dragon", weight, "starlink");
-        }
-        else //Single satellite
-        {
-            // rocket->BuildSpaceCraft("dragon", weight, "satellite");
-        }
-    }
-
-
-
-
+    rocket->BuildRocket(type);
 
     //Daniel - Testing filling tempContainer with container items
     //This code will go in Reece's spacecraft class when "loading" cargo

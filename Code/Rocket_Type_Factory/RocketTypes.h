@@ -11,5 +11,7 @@ class RocketTypes
 	
 	public:
 		RocketTypes(Engine*,Engine*);
+        Engine* getStage1();
+        Engine* getStage2();
 };
 #endif

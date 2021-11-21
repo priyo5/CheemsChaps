@@ -1,10 +1,8 @@
 #include "DragonSpacecraft.h"
 
-DragonSpacecraft::DragonSpacecraft(string sat_type) : Spacecraft()
+DragonSpacecraft::DragonSpacecraft(string sat_type) : Spacecraft(0, 0, nullptr, nullptr)
 {
-    cargo = nullptr;
     setCargo(sat_type);
-
 }
 
 void DragonSpacecraft::setCargo(string sat_type)

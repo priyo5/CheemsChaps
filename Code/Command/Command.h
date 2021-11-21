@@ -4,7 +4,7 @@
 
 #include <string>
 #include <iostream>
-#include "./Rocket_Builder/Rocket.h"
+#include "../Rocket_Builder/Rocket.h"
 
 using namespace std;
 

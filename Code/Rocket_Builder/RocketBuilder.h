@@ -20,9 +20,14 @@ using namespace std;
 class RocketBuilder
 {
 public:
+    RocketBuilder();
 	virtual RocketTypes* BuildRocketType() = 0;
 	virtual Spacecraft* BuildSpacecraftType(int numPeople,string sat_type)= 0; //crew for num people
-    RocketBuilder();
+
+    //Getters for the rocket parts
+    virtual RocketTypes* getRocketTypes() = 0;
+    virtual Spacecraft* getSpacecraft() = 0;
+
 
 protected:
     EngineFactory* merFact;
