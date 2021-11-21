@@ -14,8 +14,8 @@ int main()
     rocket->BuildRocket(1);
     cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl;
     
-    rocket->BuildRocket(2);
-    cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl; 
+//    rocket->BuildRocket(2);
+//    cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl;
     // rocket->getSpacecraft()->getObserver()->print();
     //notify observers
     //Daniel - Testing filling tempContainer with container items

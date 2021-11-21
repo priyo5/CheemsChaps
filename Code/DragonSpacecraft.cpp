@@ -25,6 +25,11 @@ void DragonSpacecraft::setCargo(string sat_type)
     tempContainer->attach(sat_1_Observer);
     sat_1_Observer->print(); //Should be not arrived yet
 
+    if(sat_type == "starlink")
+        setNumSats(60);
+    else
+        setNumSats(1);
+
     Spacecraft::setCargo(tempContainer);
     Spacecraft::setObserver(sat_1_Observer);
 }

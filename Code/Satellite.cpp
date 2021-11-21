@@ -9,7 +9,7 @@ Satellite::Satellite() : ContainerItems()
 {
     cout << "Creating a single Satellite." << endl;
     this->setNumSat(1);
-
+    cout << "SUIIIIII" << this->getNumSat() << endl;
 }
 
 //Destructor

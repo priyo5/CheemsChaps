@@ -15,14 +15,17 @@ public:
 
     //Getters
     int getNumPeople();
+    int getNumSats();
     ContainerItems* getCargo();
     ArrivalObserver* getObserver();
     void setCargo(ContainerItems*);
     void setObserver(ArrivalObserver*);
+    void setNumSats(int num);
 
 private:
     int numPeople;
     int Capacity;
+    int numSatellites;
     ContainerItems* cargo;
     ArrivalObserver* cargo_monitor;
 };
