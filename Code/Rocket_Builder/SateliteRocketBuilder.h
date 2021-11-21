@@ -1,0 +1,10 @@
+#ifndef SATELITEROCKETBUILDER_H
+#define SATELITEROCKETBUILDER_H
+
+
+class SateliteRocketBuilder {
+
+};
+
+
+#endif //SATELITEROCKETBUILDER_H

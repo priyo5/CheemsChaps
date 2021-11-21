@@ -1,0 +1,10 @@
+#ifndef STARLINKROCKETBUILDER_H
+#define STARLINKROCKETBUILDER_H
+
+
+class StarlinkRocketBuilder {
+
+};
+
+
+#endif //STARLINKROCKETBUILDER_H
