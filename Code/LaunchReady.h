@@ -5,10 +5,8 @@
 
 class LaunchReady : public State {
 	public:
-    LaunchReady();
-	void handleLaunch();
-	void handleStaticFireTest();
-    bool getPassedTest();
+    virtual void handleChange(Rocket* rocket);
+    virtual string getRocketStatus();
 };
 
 #endif

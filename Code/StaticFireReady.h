@@ -4,10 +4,8 @@
 
 class StaticFireReady : public State {
 public:
-    StaticFireReady();
-    void handleLaunch();
-    void handleStaticFireTest();
-    bool getPassedTest();
+    virtual void handleChange(Rocket* rocket);
+    virtual string getRocketStatus();
 };
 
 #endif //CODE_STATICFIREREADY_H

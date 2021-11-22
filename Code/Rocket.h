@@ -48,11 +48,17 @@ public:
     //Making the cargo arrive
     void arrive();
 
-    //Deplete the fuel every time thrusters are used
-    void deplete();
-
     //Modify menu
     void modify();
+
+    //State
+    void change();
+    string getRocketStatus();
+    void setState(State* state);
+
+protected:
+    Rocket(State* state_);
+    State* getState();
 
 private:
     State* state;
