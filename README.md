@@ -108,15 +108,15 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTACT -->
 ## Contact
 
-Daniel Azmanov - [u20441135@tuks.co.za](u20441135@tuks.co.za) - u20441135@tuks.co.za
+Daniel Azmanov - [u20441135@tuks.co.za](u20441135@tuks.co.za)
 
-Ruben Brits - [u20463163@tuks.co.za](u20463163@tuks.co.za) - u20463163@tuks.co.za
+Ruben Brits - [u20463163@tuks.co.za](u20463163@tuks.co.za)
 
-Reece Stephenson - [u20431997@tuks.co.za](u20431997@tuks.co.za) - u20431997@tuks.co.za
+Reece Stephenson - [u20431997@tuks.co.za](u20431997@tuks.co.za)
 
-Kyle Pottinger - [u20660652@tuks.co.za](u20660652@tuks.co.za) - u20660652@tuks.co.za
+Kyle Pottinger - [u20660652@tuks.co.za](u20660652@tuks.co.za)
 
-Seyuran Pillay - [u20471582@tuks.co.za](u20471582@tuks.co.za) - u20471582@tuks.co.za
+Seyuran Pillay - [u20471582@tuks.co.za](u20471582@tuks.co.za)
 
 
 Project Link: [https://github.com/priyo5/CheemsChaps](https://github.com/priyo5/CheemsChaps)
