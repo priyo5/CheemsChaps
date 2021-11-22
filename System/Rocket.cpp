@@ -78,8 +78,8 @@ void Rocket::Launch()
 
 /// Static fire the Rocket
 ///
-/// used to make sure the Rocket is ready for launch
-/// @see getRocketStatus() handleChange() getRocketTypes() fireEngine()
+/// used to make sure the Rocket is ready for launch and can make it to its destination
+/// @see getRocketStatus() handleChange() getRocketTypes()
 void Rocket::StaticFire()
 {
     if  (this->state->getRocketStatus() == "StaticFire")
@@ -113,18 +113,31 @@ void Rocket::StaticFire()
 
 }
 
-//Getters
+/// RocketTypes getter
+///
+/// used to get the RocketTypes variable.
+/// @return The type of Rocket 
+/// @see RocketTypes
 RocketTypes *Rocket::getRocketTypes()
 {
     return this->RocketBuild->getRocketTypes();
 }
 
+/// Spacecraft getter
+///
+/// used to get the Spacecraft variable.
+/// @return The Spacecraft used for the Rocket
+/// @see Spacecraft
 Spacecraft *Rocket::getSpacecraft()
 {
     return this->RocketBuild->getSpacecraft();
 }
 
-//Actually building the rocket
+/// Builder to build the Rocket
+///
+/// actually building the rocket and putting all the Rocket objects together.
+/// @param type The type of Rocket that is to be created
+/// @see BuildRocketType BuildSpacecraftType
 void Rocket::BuildRocket(int type)
 {
     //Setting the rocket type variable for the printRocket() function
@@ -157,7 +170,11 @@ void Rocket::BuildRocket(int type)
     RemainingFuel = this->getRocketTypes()->getStage1()->getFuel() + this->getRocketTypes()->getStage2()->getFuel();
 }
 
-
+/// Creation of RocketMemento
+///
+/// allows the creation of a RocketMemento to save the complete current state of the Rocket before takeoff, also stores this in rstate.
+/// @return A RocketMemento of the saved state
+/// @see RocketMemento
 RocketMemento* Rocket::makeMemento()
 {
     cout << "Creating a save of the Rocket before takeoff." << endl;
@@ -167,11 +184,21 @@ RocketMemento* Rocket::makeMemento()
     return new RocketMemento(this -> getSpacecraft() -> getNumPeople(), this -> getSpacecraft() -> getNumSats(), RemainingFuel, rstate);
 }
 
+/// Getter for the saved state
+///
+/// allows the client to get the state that was saved in rstate.
+/// @return A RocketState of the saved state
+/// @see makeMemento()
 RocketState* Rocket::getState()
 {
     return rstate;
 }
 
+/// Restores state of Rocket
+///
+/// allows for the restoration of a Rocket state by passing in the state to be restored.
+/// @param rm The state to restore the Rocket to
+/// @see RocketMemento getState()
 void Rocket::restore(RocketMemento* rm)
 {
     rstate = rm -> getState();
@@ -182,10 +209,14 @@ void Rocket::restore(RocketMemento* rm)
     this->getRocketTypes()->getStage2()->refuel();
 }
 
+
+/// Calculate if the Rocket can reach the destination
+///
+/// tells the user if the Rocket can make it to the destination by calculating how far the Rocket will be able to go given the depletion rate and fuel amount.
+/// @return Whether the Rocket can make it to the destination or not
+/// @see getPossibleDistance()
 bool Rocket::calculateDistancexFuel()
 {
-    // int func = (this->DestinationDistance / (100000));
-
     int func = this->getRocketTypes()->getStage1()->getPossibleDistance() + this->getRocketTypes()->getStage2()->getPossibleDistance();
     
     if(this->DestinationDistance > func)
@@ -200,7 +231,9 @@ bool Rocket::calculateDistancexFuel()
     }
 }
 
-//Printing the rockets build details as specified by the user
+/// Print Rocket details
+///
+/// printing the rockets build details as specified by the user with a simple output.
 void Rocket::printRocket()
 {
     cout << "\033[1;33m---------------FLIGHT DETAILS---------------\n" << endl;
@@ -232,7 +265,10 @@ void Rocket::printRocket()
     cout << "-------------------------------------------\033[0m\n" << endl;
 }
 
-//Setters
+/// Destination setter
+///
+/// setter function for the DestinationDistance and destinationName with different selections based on the destination.
+/// @param dest The planet/place destination in integer form
 void Rocket::setDestination(int dest)
 {
     if(dest == 0)
@@ -253,7 +289,11 @@ void Rocket::setDestination(int dest)
         this->destinationName = "The Moon";
     }
 }
-//Cargo arriving details
+
+/// Arrive state change
+///
+/// to set the arrive state for the Observer pattern to observe when the Rocket has arrived at its destination.
+/// @see hasArrive()
 void Rocket::arrive()
 {
     if(type > 0) //People cargo dont have observers and 0 is people
@@ -270,6 +310,11 @@ void Rocket::arrive()
     }
 }
 
+
+/// Check if the Rocket has arrived
+///
+/// to check the arrive state for the Observer pattern to observe when the Rocket has arrived at its destination.
+/// @see arrive()
 void Rocket::hasArrive()
 {
     if(type>0) //Starlink or Satellite
@@ -286,7 +331,9 @@ void Rocket::hasArrive()
 }
 
 
-//Modify menu
+/// Change the choices in the menu
+///
+/// allow the user to change what choices they have made in the past and allow the re-use of Rocket objects.
 void Rocket::modify()
 {
     int num = 0;
