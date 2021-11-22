@@ -56,10 +56,10 @@ This includes building a rocket type, satellite type and engine type. Cargo can 
 * Starlink Rocket: Falcon Heavy Rocket, Dragon Spacecraft with satellite with a stage 1 Merlin Engine and a stage 2 Vacuum Merlin Engine
 
 ### Launching a simulation
-* The user can contiuously modify the rocket and run Static fire tests.
+* The user can contiuously modify the rocket and run static fire tests.
 * Once a static fire test completes and passes, the rocket will be ready to launch.
-* The launch will display the fuel left at regular time intervals (after cetrtain distances travelled).
-* The rocket will then display that the goods to be transported have arrived.
+* The launch will display the fuel remaining at regular time intervals (after cetrtain distances travelled).
+* The rocket will then display whether the goods to be transported have arrived or not.
 
 ### Re-using rockets for the next simulation
 * The user will be prompted to choose whether to re-use the already built rocket, create a new rocket, or the end the simulation.
