@@ -56,13 +56,13 @@ public:
 
 private:
     State* state;
-    // int num_times_used_thrusters;
 
     //Variables (parts) that the Rocket contains
     int type;                           //The type of rocket the user wanted to build.
     long DestinationDistance;           //This distance according to the selected planets
     string destinationName;             //Name of selected planets
     int RemainingFuel;                  //Fuel remaining according to the number of times thrusters are used
+    bool peopleArrive;
 
     //Builders
     RocketBuilder* RocketBuild;

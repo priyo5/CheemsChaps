@@ -7,6 +7,7 @@ Rocket::Rocket()
     DestinationDistance = 0;
     destinationName = "";
     state = new StaticFireReady();
+    peopleArrive = false;
 }
 
 void Rocket::Launch()
@@ -80,8 +81,6 @@ void Rocket::BuildRocket(int type)
         int numPeople = 0;
         cout << "How many people do you want to board the Rocket?" << endl;
         cin >> numPeople;
-
-        cout << "Hello" << endl;
 
         RocketBuild = new PeopleRocketBuilder();
         RocketBuild->BuildRocketType();
@@ -198,22 +197,6 @@ void Rocket::setDestination(int dest)
     }
 }
 
-//Cargo arriving details
-void Rocket::arrive()
-{
-    if(type > 0) //People cargo dont have observers and 0 is people
-    {
-        this->getSpacecraft()->getCargo()->setArrived(true);
-        this->getSpacecraft()->getCargo()->notify();
-        this -> getSpacecraft() -> setNumSats(0);
-    }
-    else
-    {
-        cout << "Fix something with humans arriving" << endl;
-        this -> getSpacecraft() -> setNumPeople(0);
-    }
-}
-
 void Rocket::deplete()
 {
    // int rate = this->getRocketTypes()->getStage1()
@@ -227,8 +210,30 @@ void Rocket::hasArrive()
     }
     else //People
     {
-        cout << "People don't have observers. You will never know what happened to those idiots." << endl;
+        if(!peopleArrive)
+            cout << "The people are still aboard the ship." << endl;
+        else
+            cout << "The people have arrived on " << destinationName << "." << endl;
     }
+}
+
+//Cargo arriving details
+void Rocket::arrive()
+{
+    if(type > 0) //People cargo dont have observers and 0 is people
+    {
+        this->getSpacecraft()->getCargo()->setArrived(true);
+        this->getSpacecraft()->getCargo()->notify();
+        this -> getSpacecraft() -> setNumSats(0);
+    }
+    else
+    {
+        peopleArrive = true;
+//        cout << "The people have arrived on " << destinationName << "." << endl;
+        this -> getSpacecraft() -> setNumPeople(0);
+    }
+
+    //this->state->change(this); //Change the state to "docked"
 }
 
 //Modify menu
