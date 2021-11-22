@@ -106,7 +106,9 @@ int main()
          if(wantrestore == 0) //Wants to reuse rocket
          {
              rocket -> restore(RStore -> getMemento());
-
+             rocket->getSpacecraft()->getCargo()->setArrived(false);
+             rocket->getSpacecraft()->getCargo()->notify();
+             rocket->change();
              cout << "The Rocket's restored condition for the next simulation:" << endl;
 
              rocket -> printRocket();
