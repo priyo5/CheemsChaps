@@ -21,7 +21,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
          <li><a href="#The-project-was-split-into-four-main-sub-tasks">Our 4 main sub-tasks</a></li>
-         <li><a href="3-rockets-you-can-build-are">3 rockets you can build</a></li>
+         <li><a href="#3-rockets-you-can-build-are">3 rockets you can build</a></li>
          <li><a href="#Launching-a-simulation">Launching a simulation</a></li>
         <li><a href="#Re-using-rockets-for-the-next-simulation">Re-using rockets for the next simulation</a></li>
         <li><a href="#Design-Patterns-used-to-model-our-system">10 Design Patterns Used</a></li>
