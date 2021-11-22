@@ -48,9 +48,6 @@ public:
     //Making the cargo arrive
     void arrive();
 
-    //Continue flying
-    void useThrusters();
-
     //Deplete the fuel every time thrusters are used
     void deplete();
 
@@ -59,7 +56,7 @@ public:
 
 private:
     State* state;
-    int num_times_used_thrusters;
+    // int num_times_used_thrusters;
 
     //Variables (parts) that the Rocket contains
     int type;                           //The type of rocket the user wanted to build.

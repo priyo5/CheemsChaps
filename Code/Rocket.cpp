@@ -7,18 +7,23 @@ Rocket::Rocket()
     DestinationDistance = 0;
     destinationName = "";
     state = new StaticFireReady();
-    RemainingFuel = this->getRocketTypes()->getStage1()->getFuel() + this->getRocketTypes()->getStage2()->getFuel();
 }
 
 void Rocket::Launch()
 {
     if(state->getPassedTest())
+    {
         state->handleLaunch(); //Just couts
+        //Ruben needs to do variable checks and set the state appropriately
+        int travelled = this->getRocketTypes()->getStage1()->fireEngine(this->DestinationDistance); // Rocket handler handles the first stage
+        if(travelled > 0)
+            travelled = this->getRocketTypes()->getStage1()->getSuccessor()->fireEngine(travelled); // Rocket handler handles the second stage
+        
+        this->arrive();
+        this->RemainingFuel = this->getRocketTypes()->getStage1()->getFuel() + this->getRocketTypes()->getStage2()->getFuel();
+    }
     else
         cout << "Rocket has not passed the static fire test yet." << endl;
-
-    //Ruben needs to do variable checks and set the state appropriately
-    //this -> getRocketTypes() -> getStage1() -> FireEngine();
 }   
 
 void Rocket::StaticFire()
@@ -33,7 +38,7 @@ void Rocket::StaticFire()
         correct_vitals++;
     if(this->getRocketTypes()->getStage2() != nullptr)  //Stage2 engine
         correct_vitals++;
-    if(this->calculateDistancexFuel())                  //Rocket has enough feul to reach destination planet
+    if(this->calculateDistancexFuel())                  //Rocket has enough fuel to reach destination planet
         correct_vitals++;
 
     if(correct_vitals == 5)
@@ -69,11 +74,14 @@ void Rocket::BuildRocket(int type)
     //Setting the rocket type variable for the printRocket() function
     this->type = type;
 
+
     if (type == 0)
     {
         int numPeople = 0;
         cout << "How many people do you want to board the Rocket?" << endl;
         cin >> numPeople;
+
+        cout << "Hello" << endl;
 
         RocketBuild = new PeopleRocketBuilder();
         RocketBuild->BuildRocketType();
@@ -91,6 +99,8 @@ void Rocket::BuildRocket(int type)
         RocketBuild->BuildRocketType();
         RocketBuild->BuildSpacecraftType(0, "starlink");
     }
+
+    RemainingFuel = this->getRocketTypes()->getStage1()->getFuel() + this->getRocketTypes()->getStage2()->getFuel();
 }
 
 
@@ -115,9 +125,11 @@ void Rocket::restore(RocketMemento* rm)
 
 bool Rocket::calculateDistancexFuel()
 {
-    int func = (this -> DestinationDistance / 100000);
+    // int func = (this->DestinationDistance / (100000));
 
-    if(this -> RemainingFuel < func)
+    int func = this->getRocketTypes()->getStage1()->getPossibleDistance() + this->getRocketTypes()->getStage2()->getPossibleDistance();
+    
+    if(this->DestinationDistance > func)
     {
         cout << "The Rocket does not have enough fuel to get to it's destination." << endl;
         return false;
@@ -132,7 +144,7 @@ bool Rocket::calculateDistancexFuel()
 //Printing the rockets build details as specified by the user
 void Rocket::printRocket()
 {
-    cout << "---------------FLIGHT DETAILS---------------\n" << endl;
+    cout << "\033[1;33m---------------FLIGHT DETAILS---------------\n" << endl;
     cout << "Destination:           " <<destinationName << " (" << DestinationDistance << "Km)." << endl;
     if(type == 0) //People
     {
@@ -155,7 +167,7 @@ void Rocket::printRocket()
         cout << "To be transported:     Starlink fleet of Satellites." << endl;
         cout << "Number of Satellites:  " << this->getSpacecraft()->getNumSats() << "."<< endl;
     }
-    cout << "-------------------------------------------\n" << endl;
+    cout << "-------------------------------------------\033[0m\n" << endl;
 }
 
 //Setters
@@ -163,17 +175,19 @@ void Rocket::setDestination(int dest)
 {
     if(dest == 0)
     {
-        this->DestinationDistance = 37856000000;
+        // 37856000000
+        this->DestinationDistance = 350000;
         this->destinationName = "Mars";
     }
     if(dest == 1)
     {
-        this->DestinationDistance = 74817000000;
+        // 74817000000
+        this->DestinationDistance = 750000;
         this->destinationName = "Jupiter";
     }
     if(dest == 2)
     {
-        this->DestinationDistance = 384400;
+        this->DestinationDistance = 35000;
         this->destinationName = "The Moon";
     }
 }
@@ -181,7 +195,7 @@ void Rocket::setDestination(int dest)
 //Cargo arriving details
 void Rocket::arrive()
 {
-    if(type > 0) //People cargo dont have observers
+    if(type > 0) //People cargo dont have observers and 0 is people
     {
         this->getSpacecraft()->getCargo()->setArrived(true);
         this->getSpacecraft()->getCargo()->notify();
@@ -190,13 +204,6 @@ void Rocket::arrive()
     {
         cout << "Fix something with humans arriving" << endl;
     }
-}
-
-void Rocket::useThrusters()
-{
-    num_times_used_thrusters++;
-
-    //Deplete the fuel using deplete()
 }
 
 void Rocket::deplete()
@@ -212,7 +219,7 @@ void Rocket::hasArrive()
     }
     else //People
     {
-        cout << "People don't have observers.  You will never know what happened to those idiots." << endl;
+        cout << "People don't have observers. You will never know what happened to those idiots." << endl;
     }
 }
 
@@ -222,19 +229,20 @@ void Rocket::modify()
     int num = 0;
     if(type == 0) //People rocket
     {
-        cout << "What would you like to change about your rocket?\n0-Destination\n1-Number of people" << endl;
+        cout << "\033[1;34mWhat would you like to change about your rocket?\033[0m\n\n0-Destination\n1-Number of people" << endl;
         cin >> num;
 
         if(num == 0) //Destination
         {
-            cout << "Which planet is your destination?\n\n0-Mars (37856000000Km) \n1-Jupiter (74817000000Km)\n2-The Moon (384400Km)" << endl;
+            cout << "\033[1;34mWhich planet is your destination?\033[0m\n\n0-Mars (350000Km) \n1-Jupiter (750000Km)\n2-The Moon (35000Km)" << endl;
             cin >> num;
             setDestination(num);
         }
         else if(num == 1)
         {
             int numPeople = 0;
-            cout << "How many people do you want to board the Rocket?" << endl;
+            cout << "\033[1;34mHow many people do you want to board the Rocket?\033[0m" << endl;
+
             cin >> numPeople;
             RocketBuild->BuildSpacecraftType(numPeople, ""); //Rebuilding the rocket with a new number of people
         }
@@ -244,12 +252,12 @@ void Rocket::modify()
     }
     else // Starlink or Satellite
     {
-        cout << "What would you like to change about your rocket?\n0-Destination\n" << endl;
+        cout << "\033[1;34mWhat would you like to change about your rocket?\033[0m\n\n0-Destination\n" << endl;
         cin >> num;
 
         if(num == 0) //Destination
         {
-            cout << "Which planet is your destination?\n\n0-Mars (37856000000Km) \n1-Jupiter (74817000000Km)\n2-The Moon (384400Km)" << endl;
+            cout << "\033[1;34mWhich planet is your destination?\033[0m\n\n0-Mars (37856000000Km) \n1-Jupiter (74817000000Km)\n2-The Moon (384400Km)" << endl;
             cin >> num;
             setDestination(num);
         }

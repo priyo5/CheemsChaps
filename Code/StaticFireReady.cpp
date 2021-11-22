@@ -17,7 +17,7 @@ void StaticFireReady::handleLaunch(){
 
 void StaticFireReady::handleStaticFireTest()
 {
-    cout << "Static launch passed, ready for lift off\n";
+    cout << "\033[1;32mStatic launch passed, ready for lift off\033[0m\n\n";
     this->passedTest = true;
 }
 

@@ -26,10 +26,10 @@ void ArrivalObserver::print()
 {
     if(this->arrived) //The satellite has arrived
     {
-        cout << "The Satellite has arrived to its desired orbit." << endl;
+        cout << "\033[1;36mThe Satellite has arrived to its desired orbit.\033[0m" << endl;
     }
     else //The satellite hasn't arrived yet
     {
-        cout << "The satellite hasn't arrived at it's desired orbit yet." << endl;
+        cout << "\033[1;36mThe Satellite hasn't arrived to its desired orbit yet.\033[0m" << endl;
     }
 }

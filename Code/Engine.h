@@ -7,18 +7,24 @@ class Engine
 		int Fuel;
 		int used;
 		int depletion;
+		Engine* succ;
 
 	public:
 		Engine(int, int);
-		void FireEngine();
-		void StaticFire();
 		int getFuel();
 		void deplete();
 		int getD();
 		void setDepletion(int);
 		virtual void setDepletionRate(int d) = 0;
+		void setUsed();
+		int getUsed();
+		int getPossibleDistance();
 
-	protected:
-		virtual void fuelDepletion() = 0;
+		// Chain of responsibility
+		void setSuccessor(Engine*);
+		Engine* getSuccessor();
+
+		virtual int fuelDepletion(int) = 0;
+		virtual int fireEngine(int) = 0;
 };
 #endif

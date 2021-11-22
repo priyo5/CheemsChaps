@@ -9,16 +9,18 @@ Engine::Engine(int d,int f)
 	this->Fuel = f;
 	this->used = 0;
 	this->depletion = d;
+
+	this->succ = nullptr;
 }
 
-void Engine::FireEngine() 
+void Engine::setUsed()
 {
-	cout<<"Engines have ignited"<<endl;
+	this->used++;
 }
 
-void Engine::StaticFire() 
+int Engine::getUsed()
 {
-	cout<<"Static Fire commences."<<endl;
+	return this->used;
 }
 
 int Engine::getFuel() 
@@ -33,10 +35,25 @@ void Engine::setDepletion(int d)
 
 void Engine::deplete() 
 {
-	this->Fuel -= this->depletion;
+	this->Fuel -= 1000;
 }
 
 int Engine::getD() 
 {
 	return depletion;
+}
+
+int Engine::getPossibleDistance()
+{
+	return Fuel*depletion;
+}
+
+void Engine::setSuccessor(Engine* eng)
+{
+	this->succ = eng; // only 2 stages so no checks have to be done to add successor
+}
+
+Engine* Engine::getSuccessor()
+{
+	return this->succ;
 }

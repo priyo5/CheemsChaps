@@ -17,13 +17,15 @@ int main()
      int type = 0;
      int destination = 0;
 
-     /** ASKING THE USER WHAT ROCKET HE WANTS TO BUILD**/
-     cout <<underline<<"\nCHOOSE YOUR ROCKET!\n" <<sunderline;
+     
 
-    cout << "Which planet is your destination?\n\n0-Mars (37856000000Km) \n1-Jupiter (74817000000Km)\n2-The Moon (384400Km)" << endl;
+     /** ASKING THE USER WHAT ROCKET HE WANTS TO BUILD**/
+     cout <<underline<<"\n\033[1;33mCHOOSE YOUR ROCKET!\033[0m\n" <<sunderline;
+
+    cout << "\033[1;34mWhich planet is your destination?\033[0m\n\n0-Mars (350000Km) \n1-Jupiter (750000Km)\n2-The Moon (35000Km)" << endl;
     cin >> destination;
 
-     cout << "What purpose would you like your Rocket to have?\n0-Transport people\n1-Transport a single Satellite\n2-Transport a Starlink fleet\n" << endl;
+     cout << "\033[1;34mWhat purpose would you like your Rocket to have?\033[0m\n\n0-Transport people\n1-Transport a single Satellite\n2-Transport a Starlink fleet\n" << endl;
      cin >> type;
 
      rocket->BuildRocket(type);
@@ -35,9 +37,20 @@ int main()
 
 //     rocket->hasArrive();   //Checking if the cargo has arrived (which it shouldn't)
 //     rocket->arrive();      //Making the cargo arrive
-//     rocket->hasArrive();   //Checking if the cargo has arrived (which it shouldn't)
+//     rocket->hasArrive();   //Checking if the cargo has arrived (which it should)
     /*************************************************/
 
+
+    /*************Observer attaching**************/
+
+   cout << "\n------------Adding an observer to the container---------------\n" << endl;
+
+    rocket->hasArrive();
+    
+
+//     ContainerItems* tempContainer = rocket->getSpacecraft()->getCargo();
+//     ArrivalObserver* sat_1_Observer = new ArrivalObserver(tempContainer);
+//     tempContainer->attach(sat_1_Observer);
 
     /*************Actual Launch Sequence**************/
      Launch *launch = new Launch(rocket);
@@ -48,7 +61,7 @@ int main()
     int launch_type = 1;
     while(launch_type !=2) //Loop doing static tests and modifications until actual launch commences
     {
-        cout << "Would you like to run a static fire test launch, or an Actual launch?\n1-Static Fire Test\n2-Actual Launch\n3-Modify rocket" << endl;
+        cout << "\033[1;34mWould you like to run a static fire test launch, or an Actual launch?\033[0m\n1-Static Fire Test\n2-Actual Launch\n3-Modify rocket" << endl;
         cin >> launch_type;
         if(launch_type == 1)   //Static Fire Test
             aoo -> PressS();
@@ -57,6 +70,8 @@ int main()
     }
     //RUBEN - Check the state and make sure its ready for launch before actually launching the rocket
     aoo -> PressL();
+
+    rocket->hasArrive();
 
     /*************************************************/
 
@@ -91,10 +106,7 @@ int main()
 //    tempContainer->add(new Satellite()); // Decorating
 //    tempContainer->print();
 //
-//    cout << "\n------------Adding an observer to the container---------------\n" << endl;
-//    ArrivalObserver* sat_1_Observer = new ArrivalObserver(tempContainer);
-//    tempContainer->attach(sat_1_Observer);
-//    sat_1_Observer->print();
+
 //
 //    cout << "\n---------------Satellite when it arrives----------------" << endl;
 //    tempContainer->setArrived(true);

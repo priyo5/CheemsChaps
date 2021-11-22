@@ -8,8 +8,8 @@ class VacuumMerlinEngine : public Engine {
 		VacuumMerlinEngine();
 		virtual void setDepletionRate(int d);
 
-	protected:
-		virtual void fuelDepletion();
+		virtual int fuelDepletion(int);
+		virtual int fireEngine(int);
 };
 
 #endif

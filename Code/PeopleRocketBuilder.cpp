@@ -9,6 +9,8 @@ void PeopleRocketBuilder::BuildRocketType() {
     Engine* s1 = merFact->createEngine();
     Engine* s2 = vacmurFact->createEngine();
 
+    s1->setSuccessor(s2);
+
     this->rockettype = f9Fact->createRocketType(s1,s2);
 }
 

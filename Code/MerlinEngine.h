@@ -9,7 +9,7 @@ class MerlinEngine : public Engine
 		MerlinEngine();
 		virtual void setDepletionRate(int d);
 
-	protected:
-		virtual void fuelDepletion();
+		virtual int fuelDepletion(int);
+		virtual int fireEngine(int);
 };
 #endif
