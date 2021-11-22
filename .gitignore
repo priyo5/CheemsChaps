@@ -2,7 +2,11 @@
 *.bak*
 *.lck
 
-*.DS_Store
+#Vscode files
+.vscode/
+.vs/
+
+.DS_Store
 .idea/
 cmake-build-debug/
 CMakeLists.txt
