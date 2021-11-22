@@ -1,8 +1,6 @@
-#include "VacuumMerlinEngine.h"
+#include "VacuumMerlinEngineFactory.h"
 
-using namespace std;
-
-Engine* VacuumMerlinEngine::makeEngine()
+Engine* VacuumMerlinEngineFactory::makeEngine()
 {
     return new VacuumMerlinEngine();
 }

@@ -1,8 +1,5 @@
 #include "Cargo.h"
-#include "Observer.h"
 #include <iostream>
-
-using namespace std;
 
 //Constructor
 Cargo::Cargo()

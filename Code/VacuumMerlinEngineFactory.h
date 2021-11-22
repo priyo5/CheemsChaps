@@ -1,10 +1,10 @@
-#ifndef VACUUMMERLINENGINE_H
-#define VACUUMMERLINENGINE_H
+#ifndef VACUUMMERLINENGINEFACTORY_H
+#define VACUUMMERLINENGINEFACTORY_H
 
 #include "VacuumMerlinEngine.h"
 #include "EngineFactory.h"
 
-class VacuumMerlinEngine : public EngineFactory
+class VacuumMerlinEngineFactory : public EngineFactory
 {
     public:
         virtual Engine* makeEngine();

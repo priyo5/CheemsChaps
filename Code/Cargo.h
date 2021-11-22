@@ -3,9 +3,7 @@
 
 #ifndef CARGO_H
 #define CARGO_H
-#include "RocketBuilder.h"
 #include "Observer.h"
-#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -14,18 +12,16 @@ using namespace std;
  * Note:   A Dragon Spacecraft can only take cargo.  No hoomans allowed.
  */
 
-class Cargo : public RocketBuilder
+class Cargo
 {
-private:
-    int numSatellites;
-
 public:
 	Cargo();
     ~Cargo();
 	virtual void add(Cargo* cargo) = 0;
-	void setNumSat(int);
-	int getNumSat();
     virtual void print() = 0;
+
+    void setNumSat(int num);
+    int getNumSat();
 
     //OBSERVER DESIGN PATTERN
     void attach(Observer*);
@@ -33,6 +29,7 @@ public:
     void notify();
 
 private:
+    int numSatellites;
     //OBSERVER DESIGN PATTERN
     vector<Observer*> observerList;
 };

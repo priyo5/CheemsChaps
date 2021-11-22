@@ -1,18 +1,40 @@
 #ifndef ROCKETBUILDER_H
 #define ROCKETBUILDER_H
 
-#include "State.h"
-#include <string>
 
+#include "Spacecraft.h"
+#include "RocketTypes.h"
+#include "Engine.h"
+#include "MerlinEngineFactory.h"
+#include "VacuumMerlinEngineFactory.h"
+#include "SpacecraftFactory.h"
+#include "Falcon9Factory.h"
+#include "FalconHeavyFactory.h"
+#include "CrewDragonFactory.h"
+#include "DragonSpacecraftFactory.h"
+
+#include <string>
 using namespace std;
 
-class RocketBuilder {
+class RocketBuilder
+{
 public:
-	virtual void BuildRocketType(string) = 0;
+    RocketBuilder();
+	virtual void BuildRocketType() = 0;
+	virtual void BuildSpacecraftType(int numPeople,string sat_type)= 0; //crew for num people
 
-	virtual void BuildSpacecraftType(int) = 0;
+    //Getters for the rocket parts
+    virtual RocketTypes* getRocketTypes() = 0;
+    virtual Spacecraft* getSpacecraft() = 0;
 
-	virtual void BuildEngineType(string) = 0;
+
+protected:
+    EngineFactory* merFact;
+    EngineFactory* vacmurFact;
+    RocketTypeFactory* f9Fact;
+    RocketTypeFactory* fhFact;
+    SpacecraftFactory* crewFact;
+    SpacecraftFactory* dragonFact;
 };
 
 #endif

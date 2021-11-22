@@ -3,12 +3,11 @@
 
 #include "FalconHeavy.h"
 #include "RocketTypeFactory.h"
-#include "MerlinEngine.h"
-#include "VacuumMerlinEngine.h"
+#include "Engine.h"
 
 class FalconHeavyFactory : public RocketTypeFactory
 {
     public:
-        virtual RocketTypes* makeRocketType(MerlinEngine *s1,VacuumMerlinEngine *s2);
+        virtual RocketTypes* makeRocketType(Engine*,Engine*);
 };
 #endif

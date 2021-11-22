@@ -2,8 +2,6 @@
 #define ROCKETCARETAKER_H
 
 #include <string>
-#include <iostream>
-
 #include "RocketMemento.h"
 
 using namespace std;

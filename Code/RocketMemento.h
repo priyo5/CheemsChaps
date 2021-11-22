@@ -1,6 +1,9 @@
 #ifndef ROCKETMEMENTO_H
 #define ROCKETMEMENTO_H
 
+// Rocket.h to be included?????
+
+// #include "./Rocket_Builder/Rocket.h"
 #include <string>
 #include <iostream>
 
@@ -14,22 +17,22 @@ private:
     friend class Rocket;
 
     //All of these are subject to change depending on Ruben's implementation
-    string name;
-    int fuel;
-    int numEngines;
+    int numPeople;
+    int numSats;
+    int RemainingFuel;
 
     RocketState* rstate;
 
     //Once again, these are subject to change
-    string getName(){return this -> name;};
-    int getFuel(){return this -> fuel;};
-    int getEngines(){return this -> numEngines;};
+    int getRemainingFuel(){return this -> RemainingFuel;};
+    int getNumPeople(){return this -> numPeople;};
+    int getNumSats(){return this -> numSats;};
 
     RocketState* getState(){return this -> rstate;};
 
 public:
     //This is subject to change too
-    RocketMemento(string n, int f, int ne, RocketState* rs);
+    RocketMemento(int np, int ns, int rf, RocketState* rs);
 };
 
 #endif

@@ -1,19 +1,12 @@
 #include "LaunchReady.h"
-#include "State.h"
-
-using namespace std;
-
+#include "DockedReady.h"
 #include <iostream>
 
-void LaunchReady::handleLaunch(){
-    if (this->passedTest)
-    {
-        cout << "We have blastoff!\n";
-    }
-    
+void LaunchReady::handleChange(Rocket *rocket) {
+    cout << "\033[1;32mWe have blastoff\033[0m\n\n";
+    rocket->setState(new DockedReady());
 }
 
-void LaunchReady::handleStaticFireTest(){
-    cout << "Static launch passed, ready for lift off\n";
-	this->passedTest = true;
+string LaunchReady::getRocketStatus() {
+    return "Launch";
 }

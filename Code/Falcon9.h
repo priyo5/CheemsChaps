@@ -6,6 +6,6 @@
 class Falcon9 : public RocketTypes
 {
     public:
-        Falcon9(MerlinEngine *,VacuumMerlinEngine *);
+        Falcon9(Engine* ,Engine*);
 };
 #endif

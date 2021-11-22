@@ -1,7 +1,5 @@
 #include "Falcon9.h"
 
-using namespace std;
-
-Falcon9::Falcon9(MerlinEngine *s1,VacuumMerlinEngine *s2) : RocketTypes(s1,s2)
+Falcon9::Falcon9(Engine* s1,Engine* s2) : RocketTypes(s1,s2)
 {};
 

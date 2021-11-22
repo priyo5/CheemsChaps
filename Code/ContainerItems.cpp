@@ -53,3 +53,13 @@ void ContainerItems::setArrived(bool arr)
 {
     this->arrived = arr;
 }
+
+int ContainerItems::getNumSat()
+{
+    return this->numSatellites;
+}
+
+void ContainerItems::setNumSat(int num)
+{
+    this->numSatellites = num;
+}

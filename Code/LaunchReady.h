@@ -3,10 +3,10 @@
 
 #include "State.h"
 
-class LaunchReady : State {
+class LaunchReady : public State {
 	public:
-	void handleLaunch();
-	void handleStaticFireTest();
+    virtual void handleChange(Rocket* rocket);
+    virtual string getRocketStatus();
 };
 
 #endif

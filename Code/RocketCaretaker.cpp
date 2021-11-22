@@ -1,6 +1,4 @@
 #include "RocketCaretaker.h"
-
-#include <string>
 #include <iostream>
 
 RocketCaretaker::RocketCaretaker():

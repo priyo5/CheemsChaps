@@ -1,8 +1,6 @@
 #include "RocketTypeFactory.h"
 
-using namespace std;
-
-RocketTypes* RocketTypeFactory::createRocketType()
+RocketTypes* RocketTypeFactory::createRocketType(Engine* s1,Engine* s2)
 {
-	return makeRocketType();
+	return makeRocketType(s1,s2);
 }

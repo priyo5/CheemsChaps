@@ -1,7 +1,6 @@
 /**Concrete Decorator A**/
 
 #include "Satellite.h"
-#include "ContainerItems.h"
 #include <iostream>
 
 using namespace std;
@@ -10,7 +9,6 @@ Satellite::Satellite() : ContainerItems()
 {
     cout << "Creating a single Satellite." << endl;
     this->setNumSat(1);
-
 }
 
 //Destructor

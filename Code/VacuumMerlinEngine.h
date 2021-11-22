@@ -3,13 +3,14 @@
 
 #include "Engine.h"
 
-class VacuumMerlinEngine : public Engine 
-{
+class VacuumMerlinEngine : public Engine {
 	public:
 		VacuumMerlinEngine();
 		virtual void setDepletionRate(int d);
 
-	protected:
-		virtual void fuelDepletion();
+		virtual int fuelDepletion(int);
+		virtual int fireEngine(int);
+        virtual void refuel();
 };
+
 #endif

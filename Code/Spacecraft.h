@@ -2,15 +2,35 @@
 #define SPACECRAFT_H
 
 #include <string>
+#include "ContainerItems.h"
+#include "ArrivalObserver.h"
 
 using namespace std;
 
-class Spacecraft {
+class ContainerItems;
+class Spacecraft
+{
 public:
-	Spacecraft();
-	void setWeight(int);
-protected:
-	int weight; // The weight of the payload in tonnes
+	Spacecraft(int, int, ContainerItems*, ArrivalObserver*);
+
+    //Getters
+    int getNumPeople();
+    int getNumSats();
+    ContainerItems* getCargo();
+    ArrivalObserver* getObserver();
+
+    //Setters
+    void setCargo(ContainerItems*);
+    void setObserver(ArrivalObserver*);
+    void setNumSats(int num);
+    void setNumPeople(int num);
+
+private:
+    int numPeople;
+    int Capacity;
+    int numSatellites;
+    ContainerItems* cargo;
+    ArrivalObserver* cargo_monitor;
 };
 
 #endif

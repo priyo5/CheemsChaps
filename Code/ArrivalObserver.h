@@ -6,9 +6,6 @@
 #include "Observer.h"
 #include "ContainerItems.h"
 #include "Satellite.h"  //The concrete subject we are adding an observer to
-#include <iostream>
-
-using namespace std;
 
 class ArrivalObserver : public Observer
 {

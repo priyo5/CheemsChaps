@@ -1,19 +1,16 @@
 #include "CrewDragon.h"
 
-CrewDragon::CrewDragon() {}
+using namespace  std;
 
-void CrewDragon::setNumpeople(int numPeople) {
-    this->numPeople = numPeople;
-}
+#include <iostream>
 
-void CrewDragon::setCapacity(int capacity) {
-    this->capacity = capacity;
-}
-
-int CrewDragon::getNumpeople() {
-    return this->numPeople;
-}
-
-int CrewDragon::getCapacity() {
-    return this->capacity;
+CrewDragon::CrewDragon(int num) : Spacecraft(num, 20, nullptr, nullptr)
+{
+    if (num > 20)
+    {
+        cout << "Twenty is the maximum number of people of allowed.\n";
+        num = num - 20;
+        cout << "We got rid of " << num << " people :)\n";
+        this->setNumPeople(20);
+    }
 }

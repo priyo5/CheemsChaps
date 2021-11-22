@@ -6,6 +6,6 @@
 class FalconHeavy : public RocketTypes 
 {
     public:
-        FalconHeavy(MerlinEngine *,VacuumMerlinEngine *);
+        FalconHeavy(Engine *,Engine *);
 };
 #endif

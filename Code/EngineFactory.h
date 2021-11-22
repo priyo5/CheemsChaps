@@ -7,6 +7,7 @@ class EngineFactory
 {
 	public:
 		Engine* createEngine();
+	protected:
 		virtual Engine* makeEngine() = 0;
 };
 #endif

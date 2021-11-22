@@ -1,8 +1,6 @@
 #include "FalconHeavyFactory.h"
 
-using namespace std;
-
-RocketTypes* FalconHeavyFactory::makeRocketType(MerlinEngine *s1,VacuumMerlinEngine *s2)
+RocketTypes* FalconHeavyFactory::makeRocketType(Engine* s1,Engine* s2)
 {
     return new FalconHeavy(s1,s2);
 }

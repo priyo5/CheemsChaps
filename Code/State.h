@@ -1,12 +1,16 @@
 #ifndef STATE_H
 #define STATE_H
 
-class State {
+#include <string>
+#include "Rocket.h"
+
+using namespace std;
+
+class State
+        {
 	public:
-		void virtual handleLaunch() = 0;
-		void virtual handleStaticFireTest() = 0;
-		bool passedTest = false;
-		bool Launched = false;
+		void virtual handleChange(Rocket* rocket) = 0;
+		virtual string getRocketStatus() = 0;
 };
 
 #endif

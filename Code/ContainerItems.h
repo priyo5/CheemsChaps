@@ -27,12 +27,14 @@ public:
     //OBSERVER PATTERN FUNCTIONS
     bool hasArrived();      //GetState
     void setArrived(bool);  //SetState
-
+    int getNumSat();
+    void setNumSat(int);
 private:
     Cargo* container;
 
     //OBSERVER PATTERN
     bool arrived;           //SubjectState
+    int numSatellites;
 };
 
 #endif
