@@ -1,0 +1,133 @@
+\hypertarget{classRocketBuilder}{}\doxysection{Rocket\+Builder Class Reference}
+\label{classRocketBuilder}\index{RocketBuilder@{RocketBuilder}}
+
+
+{\ttfamily \#include $<$Rocket\+Builder.\+h$>$}
+
+
+
+Inheritance diagram for Rocket\+Builder\+:
+% FIG 0
+
+
+Collaboration diagram for Rocket\+Builder\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRocketBuilder_a11cd080cc3eb2a1f6a796ecbcc4dd111}{Rocket\+Builder}} ()
+\item 
+virtual void \mbox{\hyperlink{classRocketBuilder_a711588038e5b4f545e41b5b375c49345}{Build\+Rocket\+Type}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classRocketBuilder_a3784d6687da3bc1c2695387d675a57dc}{Build\+Spacecraft\+Type}} (int num\+People, string sat\+\_\+type)=0
+\item 
+virtual \mbox{\hyperlink{classRocketTypes}{Rocket\+Types}} $\ast$ \mbox{\hyperlink{classRocketBuilder_a3dfee387557890b1a415f069eaaf257a}{get\+Rocket\+Types}} ()=0
+\item 
+virtual \mbox{\hyperlink{classSpacecraft}{Spacecraft}} $\ast$ \mbox{\hyperlink{classRocketBuilder_ab6a4d179a24f1561f3be4cfc614e1e94}{get\+Spacecraft}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngineFactory}{Engine\+Factory}} $\ast$ \mbox{\hyperlink{classRocketBuilder_aafe989a375b9908644e8ac5f38abab5d}{mer\+Fact}}
+\item 
+\mbox{\hyperlink{classEngineFactory}{Engine\+Factory}} $\ast$ \mbox{\hyperlink{classRocketBuilder_aecb6b4590571e9a5e2efc9cc06377853}{vacmur\+Fact}}
+\item 
+\mbox{\hyperlink{classRocketTypeFactory}{Rocket\+Type\+Factory}} $\ast$ \mbox{\hyperlink{classRocketBuilder_a959e442614fcc52b455fca52b6792720}{f9\+Fact}}
+\item 
+\mbox{\hyperlink{classRocketTypeFactory}{Rocket\+Type\+Factory}} $\ast$ \mbox{\hyperlink{classRocketBuilder_ab6839e9b1f4f6a0bc83e2117a3adbe77}{fh\+Fact}}
+\item 
+\mbox{\hyperlink{classSpacecraftFactory}{Spacecraft\+Factory}} $\ast$ \mbox{\hyperlink{classRocketBuilder_a02ff9558111c9877f5ff1e4696a9e3e6}{crew\+Fact}}
+\item 
+\mbox{\hyperlink{classSpacecraftFactory}{Spacecraft\+Factory}} $\ast$ \mbox{\hyperlink{classRocketBuilder_aaec461b5b99a4585784eaf3ae2ff1ad1}{dragon\+Fact}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRocketBuilder_a11cd080cc3eb2a1f6a796ecbcc4dd111}\label{classRocketBuilder_a11cd080cc3eb2a1f6a796ecbcc4dd111}} 
+\index{RocketBuilder@{RocketBuilder}!RocketBuilder@{RocketBuilder}}
+\index{RocketBuilder@{RocketBuilder}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{RocketBuilder()}{RocketBuilder()}}
+{\footnotesize\ttfamily Rocket\+Builder\+::\+Rocket\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRocketBuilder_a711588038e5b4f545e41b5b375c49345}\label{classRocketBuilder_a711588038e5b4f545e41b5b375c49345}} 
+\index{RocketBuilder@{RocketBuilder}!BuildRocketType@{BuildRocketType}}
+\index{BuildRocketType@{BuildRocketType}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{BuildRocketType()}{BuildRocketType()}}
+{\footnotesize\ttfamily virtual void Rocket\+Builder\+::\+Build\+Rocket\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classStarlinkRocketBuilder_a7a455252f0e9a87e00984f70e763379b}{Starlink\+Rocket\+Builder}}, \mbox{\hyperlink{classSateliteRocketBuilder_a25e5290fe3753e8c5c6b2b1d24b4f203}{Satelite\+Rocket\+Builder}}, and \mbox{\hyperlink{classPeopleRocketBuilder_a41805f677df12eec7ffb48dfc8aa4ef4}{People\+Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classRocketBuilder_a3784d6687da3bc1c2695387d675a57dc}\label{classRocketBuilder_a3784d6687da3bc1c2695387d675a57dc}} 
+\index{RocketBuilder@{RocketBuilder}!BuildSpacecraftType@{BuildSpacecraftType}}
+\index{BuildSpacecraftType@{BuildSpacecraftType}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{BuildSpacecraftType()}{BuildSpacecraftType()}}
+{\footnotesize\ttfamily virtual void Rocket\+Builder\+::\+Build\+Spacecraft\+Type (\begin{DoxyParamCaption}\item[{int}]{num\+People,  }\item[{string}]{sat\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classStarlinkRocketBuilder_a1c7b879f0d622e29a08512af49b921d6}{Starlink\+Rocket\+Builder}}, \mbox{\hyperlink{classSateliteRocketBuilder_a486cdd2d3be5c73b0e069382a35a2d34}{Satelite\+Rocket\+Builder}}, and \mbox{\hyperlink{classPeopleRocketBuilder_a865dd5dcd1d9d0cf6a8d4a88f9a33ca7}{People\+Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classRocketBuilder_a3dfee387557890b1a415f069eaaf257a}\label{classRocketBuilder_a3dfee387557890b1a415f069eaaf257a}} 
+\index{RocketBuilder@{RocketBuilder}!getRocketTypes@{getRocketTypes}}
+\index{getRocketTypes@{getRocketTypes}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{getRocketTypes()}{getRocketTypes()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classRocketTypes}{Rocket\+Types}}$\ast$ Rocket\+Builder\+::get\+Rocket\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classStarlinkRocketBuilder_ad3e99eb50fe636a12a2861ee49209d68}{Starlink\+Rocket\+Builder}}, \mbox{\hyperlink{classSateliteRocketBuilder_a832f1b48a9cd38877d56dfe19e0ea659}{Satelite\+Rocket\+Builder}}, and \mbox{\hyperlink{classPeopleRocketBuilder_acc80e95215d389c63065f87421201630}{People\+Rocket\+Builder}}.
+
+\mbox{\Hypertarget{classRocketBuilder_ab6a4d179a24f1561f3be4cfc614e1e94}\label{classRocketBuilder_ab6a4d179a24f1561f3be4cfc614e1e94}} 
+\index{RocketBuilder@{RocketBuilder}!getSpacecraft@{getSpacecraft}}
+\index{getSpacecraft@{getSpacecraft}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{getSpacecraft()}{getSpacecraft()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classSpacecraft}{Spacecraft}}$\ast$ Rocket\+Builder\+::get\+Spacecraft (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classStarlinkRocketBuilder_a52f9ebf173ffde9957ad74d597332faa}{Starlink\+Rocket\+Builder}}, \mbox{\hyperlink{classSateliteRocketBuilder_a6cd25d7d40b427600cfa5f0b883540e9}{Satelite\+Rocket\+Builder}}, and \mbox{\hyperlink{classPeopleRocketBuilder_a6e653351a2e85591d8852cc764113b70}{People\+Rocket\+Builder}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRocketBuilder_a02ff9558111c9877f5ff1e4696a9e3e6}\label{classRocketBuilder_a02ff9558111c9877f5ff1e4696a9e3e6}} 
+\index{RocketBuilder@{RocketBuilder}!crewFact@{crewFact}}
+\index{crewFact@{crewFact}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{crewFact}{crewFact}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSpacecraftFactory}{Spacecraft\+Factory}}$\ast$ Rocket\+Builder\+::crew\+Fact\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classRocketBuilder_aaec461b5b99a4585784eaf3ae2ff1ad1}\label{classRocketBuilder_aaec461b5b99a4585784eaf3ae2ff1ad1}} 
+\index{RocketBuilder@{RocketBuilder}!dragonFact@{dragonFact}}
+\index{dragonFact@{dragonFact}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{dragonFact}{dragonFact}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSpacecraftFactory}{Spacecraft\+Factory}}$\ast$ Rocket\+Builder\+::dragon\+Fact\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classRocketBuilder_a959e442614fcc52b455fca52b6792720}\label{classRocketBuilder_a959e442614fcc52b455fca52b6792720}} 
+\index{RocketBuilder@{RocketBuilder}!f9Fact@{f9Fact}}
+\index{f9Fact@{f9Fact}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{f9Fact}{f9Fact}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocketTypeFactory}{Rocket\+Type\+Factory}}$\ast$ Rocket\+Builder\+::f9\+Fact\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classRocketBuilder_ab6839e9b1f4f6a0bc83e2117a3adbe77}\label{classRocketBuilder_ab6839e9b1f4f6a0bc83e2117a3adbe77}} 
+\index{RocketBuilder@{RocketBuilder}!fhFact@{fhFact}}
+\index{fhFact@{fhFact}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{fhFact}{fhFact}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocketTypeFactory}{Rocket\+Type\+Factory}}$\ast$ Rocket\+Builder\+::fh\+Fact\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classRocketBuilder_aafe989a375b9908644e8ac5f38abab5d}\label{classRocketBuilder_aafe989a375b9908644e8ac5f38abab5d}} 
+\index{RocketBuilder@{RocketBuilder}!merFact@{merFact}}
+\index{merFact@{merFact}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{merFact}{merFact}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngineFactory}{Engine\+Factory}}$\ast$ Rocket\+Builder\+::mer\+Fact\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classRocketBuilder_aecb6b4590571e9a5e2efc9cc06377853}\label{classRocketBuilder_aecb6b4590571e9a5e2efc9cc06377853}} 
+\index{RocketBuilder@{RocketBuilder}!vacmurFact@{vacmurFact}}
+\index{vacmurFact@{vacmurFact}!RocketBuilder@{RocketBuilder}}
+\doxysubsubsection{\texorpdfstring{vacmurFact}{vacmurFact}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngineFactory}{Engine\+Factory}}$\ast$ Rocket\+Builder\+::vacmur\+Fact\hspace{0.3cm}{\ttfamily [protected]}}
+

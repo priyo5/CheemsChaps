@@ -1,0 +1,113 @@
+\hypertarget{classCargo}{}\doxysection{Cargo Class Reference}
+\label{classCargo}\index{Cargo@{Cargo}}
+
+
+Note\+: A Dragon \mbox{\hyperlink{classSpacecraft}{Spacecraft}} can only take cargo.  
+
+
+
+
+{\ttfamily \#include $<$Cargo.\+h$>$}
+
+
+
+Inheritance diagram for Cargo\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCargo_a93ad244ef7f9fbe6cf2ed289eca69bd8}{Cargo}} ()
+\item 
+\mbox{\hyperlink{classCargo_a225bb186cf1f038f97e0d989adff017b}{$\sim$\+Cargo}} ()
+\item 
+virtual void \mbox{\hyperlink{classCargo_a8ace6e85f1f2a34dc90c6b58cc061645}{add}} (\mbox{\hyperlink{classCargo}{Cargo}} $\ast$cargo)=0
+\item 
+virtual void \mbox{\hyperlink{classCargo_a7cd60d3f6284eba44f36666bd168ebcd}{print}} ()=0
+\item 
+void \mbox{\hyperlink{classCargo_aafdc01efa081db0721c444bb737b5b17}{set\+Num\+Sat}} (int num)
+\item 
+int \mbox{\hyperlink{classCargo_af8375430a9d9dd575cff3e34061461d4}{get\+Num\+Sat}} ()
+\item 
+void \mbox{\hyperlink{classCargo_ad1e70d2f72b28fb8ab358bba2ce8e0e2}{attach}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$)
+\begin{DoxyCompactList}\small\item\em OBSERVER DESIGN PATTERN FUNCTIONS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCargo_a3f599a0268272602815de196c36064f1}{detach}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$)
+\item 
+void \mbox{\hyperlink{classCargo_ab5d79fcba5983b1d592401b77a4101c7}{notify}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Note\+: A Dragon \mbox{\hyperlink{classSpacecraft}{Spacecraft}} can only take cargo. 
+
+No hoomans allowed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCargo_a93ad244ef7f9fbe6cf2ed289eca69bd8}\label{classCargo_a93ad244ef7f9fbe6cf2ed289eca69bd8}} 
+\index{Cargo@{Cargo}!Cargo@{Cargo}}
+\index{Cargo@{Cargo}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{Cargo()}{Cargo()}}
+{\footnotesize\ttfamily Cargo\+::\+Cargo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCargo_a225bb186cf1f038f97e0d989adff017b}\label{classCargo_a225bb186cf1f038f97e0d989adff017b}} 
+\index{Cargo@{Cargo}!````~Cargo@{$\sim$Cargo}}
+\index{````~Cargo@{$\sim$Cargo}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Cargo()}{~Cargo()}}
+{\footnotesize\ttfamily Cargo\+::$\sim$\+Cargo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCargo_a8ace6e85f1f2a34dc90c6b58cc061645}\label{classCargo_a8ace6e85f1f2a34dc90c6b58cc061645}} 
+\index{Cargo@{Cargo}!add@{add}}
+\index{add@{add}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Cargo\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCargo}{Cargo}} $\ast$}]{cargo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classContainerItems_a8fa3327143c032af5d79aca45a3d58a1}{Container\+Items}}.
+
+\mbox{\Hypertarget{classCargo_ad1e70d2f72b28fb8ab358bba2ce8e0e2}\label{classCargo_ad1e70d2f72b28fb8ab358bba2ce8e0e2}} 
+\index{Cargo@{Cargo}!attach@{attach}}
+\index{attach@{attach}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Cargo\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+OBSERVER DESIGN PATTERN FUNCTIONS. 
+
+\mbox{\Hypertarget{classCargo_a3f599a0268272602815de196c36064f1}\label{classCargo_a3f599a0268272602815de196c36064f1}} 
+\index{Cargo@{Cargo}!detach@{detach}}
+\index{detach@{detach}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Cargo\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{o }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCargo_af8375430a9d9dd575cff3e34061461d4}\label{classCargo_af8375430a9d9dd575cff3e34061461d4}} 
+\index{Cargo@{Cargo}!getNumSat@{getNumSat}}
+\index{getNumSat@{getNumSat}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{getNumSat()}{getNumSat()}}
+{\footnotesize\ttfamily int Cargo\+::get\+Num\+Sat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCargo_ab5d79fcba5983b1d592401b77a4101c7}\label{classCargo_ab5d79fcba5983b1d592401b77a4101c7}} 
+\index{Cargo@{Cargo}!notify@{notify}}
+\index{notify@{notify}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Cargo\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCargo_a7cd60d3f6284eba44f36666bd168ebcd}\label{classCargo_a7cd60d3f6284eba44f36666bd168ebcd}} 
+\index{Cargo@{Cargo}!print@{print}}
+\index{print@{print}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Cargo\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classStarlink_a93ef6b5b2c734e06806e78868966bbd5}{Starlink}}, \mbox{\hyperlink{classSatellite_adaf402db71bdca61b3692b107d8a758e}{Satellite}}, and \mbox{\hyperlink{classContainerItems_a799d4578f37c1e6175a5da8c6635e5f2}{Container\+Items}}.
+
+\mbox{\Hypertarget{classCargo_aafdc01efa081db0721c444bb737b5b17}\label{classCargo_aafdc01efa081db0721c444bb737b5b17}} 
+\index{Cargo@{Cargo}!setNumSat@{setNumSat}}
+\index{setNumSat@{setNumSat}!Cargo@{Cargo}}
+\doxysubsubsection{\texorpdfstring{setNumSat()}{setNumSat()}}
+{\footnotesize\ttfamily void Cargo\+::set\+Num\+Sat (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+

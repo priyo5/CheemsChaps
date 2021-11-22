@@ -1,0 +1,40 @@
+\hypertarget{classState}{}\doxysection{State Class Reference}
+\label{classState}\index{State@{State}}
+
+
+{\ttfamily \#include $<$State.\+h$>$}
+
+
+
+Inheritance diagram for State\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classState_a7bf7e355197bae3299b0ece0482cfdf8}{handle\+Change}} (\mbox{\hyperlink{classRocket}{Rocket}} $\ast$rocket)=0
+\item 
+virtual string \mbox{\hyperlink{classState_a6011505608d60510c02bfffa062e4bf6}{get\+Rocket\+Status}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classState_a6011505608d60510c02bfffa062e4bf6}\label{classState_a6011505608d60510c02bfffa062e4bf6}} 
+\index{State@{State}!getRocketStatus@{getRocketStatus}}
+\index{getRocketStatus@{getRocketStatus}!State@{State}}
+\doxysubsubsection{\texorpdfstring{getRocketStatus()}{getRocketStatus()}}
+{\footnotesize\ttfamily virtual string State\+::get\+Rocket\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classStaticFireReady_a478baeb716697ea3593f0fa7011d1de0}{Static\+Fire\+Ready}}, \mbox{\hyperlink{classLaunchReady_abe7586b5abb4ebfa2d66f6b372c98701}{Launch\+Ready}}, and \mbox{\hyperlink{classDockedReady_a3e70b5da92ca240ef31d17bd654e2093}{Docked\+Ready}}.
+
+\mbox{\Hypertarget{classState_a7bf7e355197bae3299b0ece0482cfdf8}\label{classState_a7bf7e355197bae3299b0ece0482cfdf8}} 
+\index{State@{State}!handleChange@{handleChange}}
+\index{handleChange@{handleChange}!State@{State}}
+\doxysubsubsection{\texorpdfstring{handleChange()}{handleChange()}}
+{\footnotesize\ttfamily virtual void State\+::handle\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRocket}{Rocket}} $\ast$}]{rocket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classStaticFireReady_a721f989e304efa8ecbedd157a353d36d}{Static\+Fire\+Ready}}, \mbox{\hyperlink{classLaunchReady_a7c078d3a8019c7dae9427d01f3f2dec8}{Launch\+Ready}}, and \mbox{\hyperlink{classDockedReady_a43e87cc95a17028fbf2f9a8d6026ccba}{Docked\+Ready}}.
+

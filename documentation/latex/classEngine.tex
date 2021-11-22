@@ -1,0 +1,155 @@
+\hypertarget{classEngine}{}\doxysection{Engine Class Reference}
+\label{classEngine}\index{Engine@{Engine}}
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+
+
+Inheritance diagram for Engine\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_aab2c92bfdb01efc5285bee3be563718d}{Engine}} (int, int)
+\item 
+int \mbox{\hyperlink{classEngine_a5b3de5e066192b11ad63f36fe48ba3b5}{get\+Fuel}} ()
+\item 
+void \mbox{\hyperlink{classEngine_a26cd19ab319fc0f0e84790393eb6ee01}{deplete}} ()
+\item 
+int \mbox{\hyperlink{classEngine_a0d8b8811c14b7fb1ea08a625b1bde0dc}{getD}} ()
+\item 
+void \mbox{\hyperlink{classEngine_a36244503b054681009b28e7397afa6a8}{set\+Depletion}} (int)
+\item 
+virtual void \mbox{\hyperlink{classEngine_a8d05ee2b947f964f66408aa749a66c9e}{set\+Depletion\+Rate}} (int d)=0
+\item 
+void \mbox{\hyperlink{classEngine_af73e75ea91fc0f40d5b5fea0165e193c}{set\+Used}} ()
+\item 
+int \mbox{\hyperlink{classEngine_a82cbc211ca97a443b33707bb1577fc6c}{get\+Used}} ()
+\item 
+int \mbox{\hyperlink{classEngine_a389a4eef1c6decb6c6c5f08c6540d2e0}{get\+Possible\+Distance}} ()
+\item 
+virtual void \mbox{\hyperlink{classEngine_a5d90b52eb85dfd0014b409edb99d3a0c}{refuel}} ()=0
+\item 
+void \mbox{\hyperlink{classEngine_a03f97602deb1a8045e765ec3365c0c05}{set\+Successor}} (\mbox{\hyperlink{classEngine}{Engine}} $\ast$)
+\item 
+\mbox{\hyperlink{classEngine}{Engine}} $\ast$ \mbox{\hyperlink{classEngine_a610071cc1796f920d55f273cd37336e4}{get\+Successor}} ()
+\item 
+virtual int \mbox{\hyperlink{classEngine_a26462bd0b047d8c2a98d4a115d997a63}{fuel\+Depletion}} (int)=0
+\item 
+virtual int \mbox{\hyperlink{classEngine_a9d154264dd83a30def23b8062d958c2b}{fire\+Engine}} (int)=0
+\item 
+void \mbox{\hyperlink{classEngine_aa86f0c4ad3cc3059e9d3850f5f1177d9}{set\+Fuel}} (int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_aab2c92bfdb01efc5285bee3be563718d}\label{classEngine_aab2c92bfdb01efc5285bee3be563718d}} 
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Engine()}{Engine()}}
+{\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}\item[{int}]{d,  }\item[{int}]{f }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_a26cd19ab319fc0f0e84790393eb6ee01}\label{classEngine_a26cd19ab319fc0f0e84790393eb6ee01}} 
+\index{Engine@{Engine}!deplete@{deplete}}
+\index{deplete@{deplete}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{deplete()}{deplete()}}
+{\footnotesize\ttfamily void Engine\+::deplete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_a9d154264dd83a30def23b8062d958c2b}\label{classEngine_a9d154264dd83a30def23b8062d958c2b}} 
+\index{Engine@{Engine}!fireEngine@{fireEngine}}
+\index{fireEngine@{fireEngine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{fireEngine()}{fireEngine()}}
+{\footnotesize\ttfamily virtual int Engine\+::fire\+Engine (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classVacuumMerlinEngine_aaa38cdc0bff44dc3f6ed20c3cd3e7306}{Vacuum\+Merlin\+Engine}}, and \mbox{\hyperlink{classMerlinEngine_ace2b27b4de8ddefb9ea29976e3a79ed5}{Merlin\+Engine}}.
+
+\mbox{\Hypertarget{classEngine_a26462bd0b047d8c2a98d4a115d997a63}\label{classEngine_a26462bd0b047d8c2a98d4a115d997a63}} 
+\index{Engine@{Engine}!fuelDepletion@{fuelDepletion}}
+\index{fuelDepletion@{fuelDepletion}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{fuelDepletion()}{fuelDepletion()}}
+{\footnotesize\ttfamily virtual int Engine\+::fuel\+Depletion (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classVacuumMerlinEngine_a7c10195d283616c533f45a949eed4a29}{Vacuum\+Merlin\+Engine}}, and \mbox{\hyperlink{classMerlinEngine_ae04769483622ca6f4231ac553cb2c17a}{Merlin\+Engine}}.
+
+\mbox{\Hypertarget{classEngine_a0d8b8811c14b7fb1ea08a625b1bde0dc}\label{classEngine_a0d8b8811c14b7fb1ea08a625b1bde0dc}} 
+\index{Engine@{Engine}!getD@{getD}}
+\index{getD@{getD}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getD()}{getD()}}
+{\footnotesize\ttfamily int Engine\+::getD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_a5b3de5e066192b11ad63f36fe48ba3b5}\label{classEngine_a5b3de5e066192b11ad63f36fe48ba3b5}} 
+\index{Engine@{Engine}!getFuel@{getFuel}}
+\index{getFuel@{getFuel}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getFuel()}{getFuel()}}
+{\footnotesize\ttfamily int Engine\+::get\+Fuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_a389a4eef1c6decb6c6c5f08c6540d2e0}\label{classEngine_a389a4eef1c6decb6c6c5f08c6540d2e0}} 
+\index{Engine@{Engine}!getPossibleDistance@{getPossibleDistance}}
+\index{getPossibleDistance@{getPossibleDistance}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getPossibleDistance()}{getPossibleDistance()}}
+{\footnotesize\ttfamily int Engine\+::get\+Possible\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_a610071cc1796f920d55f273cd37336e4}\label{classEngine_a610071cc1796f920d55f273cd37336e4}} 
+\index{Engine@{Engine}!getSuccessor@{getSuccessor}}
+\index{getSuccessor@{getSuccessor}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getSuccessor()}{getSuccessor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine}{Engine}} $\ast$ Engine\+::get\+Successor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_a82cbc211ca97a443b33707bb1577fc6c}\label{classEngine_a82cbc211ca97a443b33707bb1577fc6c}} 
+\index{Engine@{Engine}!getUsed@{getUsed}}
+\index{getUsed@{getUsed}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getUsed()}{getUsed()}}
+{\footnotesize\ttfamily int Engine\+::get\+Used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_a5d90b52eb85dfd0014b409edb99d3a0c}\label{classEngine_a5d90b52eb85dfd0014b409edb99d3a0c}} 
+\index{Engine@{Engine}!refuel@{refuel}}
+\index{refuel@{refuel}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{refuel()}{refuel()}}
+{\footnotesize\ttfamily virtual void Engine\+::refuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classVacuumMerlinEngine_a966e9847700534b5b127d28fc711dae8}{Vacuum\+Merlin\+Engine}}, and \mbox{\hyperlink{classMerlinEngine_af1b33a9738de78a058896f194cb25af2}{Merlin\+Engine}}.
+
+\mbox{\Hypertarget{classEngine_a36244503b054681009b28e7397afa6a8}\label{classEngine_a36244503b054681009b28e7397afa6a8}} 
+\index{Engine@{Engine}!setDepletion@{setDepletion}}
+\index{setDepletion@{setDepletion}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setDepletion()}{setDepletion()}}
+{\footnotesize\ttfamily void Engine\+::set\+Depletion (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_a8d05ee2b947f964f66408aa749a66c9e}\label{classEngine_a8d05ee2b947f964f66408aa749a66c9e}} 
+\index{Engine@{Engine}!setDepletionRate@{setDepletionRate}}
+\index{setDepletionRate@{setDepletionRate}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setDepletionRate()}{setDepletionRate()}}
+{\footnotesize\ttfamily virtual void Engine\+::set\+Depletion\+Rate (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classVacuumMerlinEngine_a4230dc1aee0418ef1a502a4790459d4f}{Vacuum\+Merlin\+Engine}}, and \mbox{\hyperlink{classMerlinEngine_a9fd3c65b17a9ef1c4e26c872ee8c093a}{Merlin\+Engine}}.
+
+\mbox{\Hypertarget{classEngine_aa86f0c4ad3cc3059e9d3850f5f1177d9}\label{classEngine_aa86f0c4ad3cc3059e9d3850f5f1177d9}} 
+\index{Engine@{Engine}!setFuel@{setFuel}}
+\index{setFuel@{setFuel}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setFuel()}{setFuel()}}
+{\footnotesize\ttfamily void Engine\+::set\+Fuel (\begin{DoxyParamCaption}\item[{int}]{new\+Amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_a03f97602deb1a8045e765ec3365c0c05}\label{classEngine_a03f97602deb1a8045e765ec3365c0c05}} 
+\index{Engine@{Engine}!setSuccessor@{setSuccessor}}
+\index{setSuccessor@{setSuccessor}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setSuccessor()}{setSuccessor()}}
+{\footnotesize\ttfamily void Engine\+::set\+Successor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine}{Engine}} $\ast$}]{eng }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEngine_af73e75ea91fc0f40d5b5fea0165e193c}\label{classEngine_af73e75ea91fc0f40d5b5fea0165e193c}} 
+\index{Engine@{Engine}!setUsed@{setUsed}}
+\index{setUsed@{setUsed}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setUsed()}{setUsed()}}
+{\footnotesize\ttfamily void Engine\+::set\+Used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

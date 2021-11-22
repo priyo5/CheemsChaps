@@ -1,0 +1,249 @@
+\hypertarget{classRocket}{}\doxysection{Rocket Class Reference}
+\label{classRocket}\index{Rocket@{Rocket}}
+
+
+\mbox{\hyperlink{classRocket}{Rocket}} is the director for the entire heirarchy.  
+
+
+
+
+{\ttfamily \#include $<$Rocket.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRocket_a372a072f1c3a977c40938ba56202ecc6}{Rocket}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classRocket}{Rocket}} for a new state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRocket_abc02f9709cb2e0498021a779a7125fd9}{Launch}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classLaunch}{Launch}} the \mbox{\hyperlink{classRocket}{Rocket}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRocket_a7fe4e4b279f932271ed8a282aa7ba5a9}{Static\+Fire}} ()
+\begin{DoxyCompactList}\small\item\em Static fire the \mbox{\hyperlink{classRocket}{Rocket}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRocketTypes}{Rocket\+Types}} $\ast$ \mbox{\hyperlink{classRocket_a1c1432668896ed681065b8ca8e3d7664}{get\+Rocket\+Types}} ()
+\item 
+\mbox{\hyperlink{classSpacecraft}{Spacecraft}} $\ast$ \mbox{\hyperlink{classRocket_a4fcfc8a3994de8774fd4a2c845b8b291}{get\+Spacecraft}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a89dc6c9914e632ec7b8e4e87afd4e8fc}{set\+Destination}} (int dest)
+\item 
+void \mbox{\hyperlink{classRocket_ad78f0566803a33fde7e8b1dc6ce914fa}{Build\+Rocket}} (int type)
+\item 
+\mbox{\hyperlink{classRocketState}{Rocket\+State}} $\ast$ \mbox{\hyperlink{classRocket_a2d7dcccbef963b988813debbf7bea7ce}{get\+State}} ()
+\item 
+\mbox{\hyperlink{classRocketMemento}{Rocket\+Memento}} $\ast$ \mbox{\hyperlink{classRocket_afe3f4e3dbbb2ba9d89a654f4b5278c87}{make\+Memento}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a6dac86ec02a41979dd7aad7388e3422c}{restore}} (\mbox{\hyperlink{classRocketMemento}{Rocket\+Memento}} $\ast$rm)
+\item 
+bool \mbox{\hyperlink{classRocket_a92ee347de186cd848d2f83596df32270}{calculate\+Distancex\+Fuel}} ()
+\item 
+void \mbox{\hyperlink{classRocket_af8c27b7d7c7a3d61db6a63b9d461c55d}{print\+Rocket}} ()
+\item 
+void \mbox{\hyperlink{classRocket_aff086c8996475daef0c70ccedec54210}{has\+Arrive}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a2033c373db47b1a542b6a773b7ca4a68}{arrive}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a2c3b619a81afdaf5458a99a8029a2220}{modify}} ()
+\item 
+void \mbox{\hyperlink{classRocket_a4c191a6d538071e05b31bbeeba5d1021}{change}} ()
+\begin{DoxyCompactList}\small\item\em Will set a new state according to current state. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRocket_aa39d63c78ace7008d2db95a8d928a3b4}{get\+Rocket\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Give a string of the state of the \mbox{\hyperlink{classRocket}{Rocket}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRocket_acf9b3e11d96f19e517cdc972448834a1}{set\+State}} (\mbox{\hyperlink{classState}{State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Sets the state of \mbox{\hyperlink{classRocket}{Rocket}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRocket_a2a8e49e3a085ecb193908fb074b3bc9b}{Rocket}} (\mbox{\hyperlink{classState}{State}} $\ast$state\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classRocket}{Rocket}} with state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classRocket_ab39f9a906eaaae467dc5f229f170a264}{get\+Rocket\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gets the state of \mbox{\hyperlink{classRocket}{Rocket}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classRocket}{Rocket}} is the director for the entire heirarchy. 
+
+An object that the user interacts with in order to create the \mbox{\hyperlink{classRocket}{Rocket}}, modify the Rockets contents and to test/launch the \mbox{\hyperlink{classRocket}{Rocket}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRocket_a372a072f1c3a977c40938ba56202ecc6}\label{classRocket_a372a072f1c3a977c40938ba56202ecc6}} 
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{Rocket()}{Rocket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Rocket\+::\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classRocket}{Rocket}} for a new state. 
+
+initialises the private variables of \mbox{\hyperlink{classRocket}{Rocket}} and sets the state of the \mbox{\hyperlink{classRocket}{Rocket}}. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classRocket_acf9b3e11d96f19e517cdc972448834a1}{set\+State()}} ~\newline
+ 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classRocket_a2a8e49e3a085ecb193908fb074b3bc9b}\label{classRocket_a2a8e49e3a085ecb193908fb074b3bc9b}} 
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\index{Rocket@{Rocket}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{Rocket()}{Rocket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Rocket\+::\+Rocket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classState}{State}} $\ast$}]{state\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor for \mbox{\hyperlink{classRocket}{Rocket}} with state. 
+
+initialises the private variables of \mbox{\hyperlink{classRocket}{Rocket}} and sets the state of the \mbox{\hyperlink{classRocket}{Rocket}}. 
+\begin{DoxyParams}{Parameters}
+{\em state\+\_\+} & The state to set the \mbox{\hyperlink{classRocket}{Rocket}} to \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRocket_a2033c373db47b1a542b6a773b7ca4a68}\label{classRocket_a2033c373db47b1a542b6a773b7ca4a68}} 
+\index{Rocket@{Rocket}!arrive@{arrive}}
+\index{arrive@{arrive}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{arrive()}{arrive()}}
+{\footnotesize\ttfamily void Rocket\+::arrive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_ad78f0566803a33fde7e8b1dc6ce914fa}\label{classRocket_ad78f0566803a33fde7e8b1dc6ce914fa}} 
+\index{Rocket@{Rocket}!BuildRocket@{BuildRocket}}
+\index{BuildRocket@{BuildRocket}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{BuildRocket()}{BuildRocket()}}
+{\footnotesize\ttfamily void Rocket\+::\+Build\+Rocket (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_a92ee347de186cd848d2f83596df32270}\label{classRocket_a92ee347de186cd848d2f83596df32270}} 
+\index{Rocket@{Rocket}!calculateDistancexFuel@{calculateDistancexFuel}}
+\index{calculateDistancexFuel@{calculateDistancexFuel}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{calculateDistancexFuel()}{calculateDistancexFuel()}}
+{\footnotesize\ttfamily bool Rocket\+::calculate\+Distancex\+Fuel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_a4c191a6d538071e05b31bbeeba5d1021}\label{classRocket_a4c191a6d538071e05b31bbeeba5d1021}} 
+\index{Rocket@{Rocket}!change@{change}}
+\index{change@{change}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{change()}{change()}}
+{\footnotesize\ttfamily void Rocket\+::change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will set a new state according to current state. 
+
+if the current state is \mbox{\hyperlink{classStaticFireReady}{Static\+Fire\+Ready()}} then state will be set to \mbox{\hyperlink{classLaunchReady}{Launch\+Ready()}}, if the current state is \mbox{\hyperlink{classLaunchReady}{Launch\+Ready()}} it will be set to \mbox{\hyperlink{classDockedReady}{Docked\+Ready()}}, if current state is \mbox{\hyperlink{classDockedReady}{Docked\+Ready()}} it will be set back to \mbox{\hyperlink{classStaticFireReady}{Static\+Fire\+Ready()}}. \begin{DoxySeeAlso}{See also}
+handle\+Change() \mbox{\hyperlink{classStaticFireReady}{Static\+Fire\+Ready()}} \mbox{\hyperlink{classLaunchReady}{Launch\+Ready()}} \mbox{\hyperlink{classDockedReady}{Docked\+Ready()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classRocket_ab39f9a906eaaae467dc5f229f170a264}\label{classRocket_ab39f9a906eaaae467dc5f229f170a264}} 
+\index{Rocket@{Rocket}!getRocketState@{getRocketState}}
+\index{getRocketState@{getRocketState}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{getRocketState()}{getRocketState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Rocket\+::get\+Rocket\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Gets the state of \mbox{\hyperlink{classRocket}{Rocket}}. 
+
+uses the state variable to give the state that the \mbox{\hyperlink{classRocket}{Rocket}} is currently in. \begin{DoxyReturn}{Returns}
+The state of the \mbox{\hyperlink{classRocket}{Rocket}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_aa39d63c78ace7008d2db95a8d928a3b4}\label{classRocket_aa39d63c78ace7008d2db95a8d928a3b4}} 
+\index{Rocket@{Rocket}!getRocketStatus@{getRocketStatus}}
+\index{getRocketStatus@{getRocketStatus}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{getRocketStatus()}{getRocketStatus()}}
+{\footnotesize\ttfamily string Rocket\+::get\+Rocket\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Give a string of the state of the \mbox{\hyperlink{classRocket}{Rocket}}. 
+
+allows for the outputting of the state by converting the state to string. \begin{DoxyReturn}{Returns}
+String form of the current \mbox{\hyperlink{classState}{State}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRocket_a1c1432668896ed681065b8ca8e3d7664}\label{classRocket_a1c1432668896ed681065b8ca8e3d7664}} 
+\index{Rocket@{Rocket}!getRocketTypes@{getRocketTypes}}
+\index{getRocketTypes@{getRocketTypes}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{getRocketTypes()}{getRocketTypes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocketTypes}{Rocket\+Types}} $\ast$ Rocket\+::get\+Rocket\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_a4fcfc8a3994de8774fd4a2c845b8b291}\label{classRocket_a4fcfc8a3994de8774fd4a2c845b8b291}} 
+\index{Rocket@{Rocket}!getSpacecraft@{getSpacecraft}}
+\index{getSpacecraft@{getSpacecraft}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{getSpacecraft()}{getSpacecraft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSpacecraft}{Spacecraft}} $\ast$ Rocket\+::get\+Spacecraft (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_a2d7dcccbef963b988813debbf7bea7ce}\label{classRocket_a2d7dcccbef963b988813debbf7bea7ce}} 
+\index{Rocket@{Rocket}!getState@{getState}}
+\index{getState@{getState}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocketState}{Rocket\+State}} $\ast$ Rocket\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_aff086c8996475daef0c70ccedec54210}\label{classRocket_aff086c8996475daef0c70ccedec54210}} 
+\index{Rocket@{Rocket}!hasArrive@{hasArrive}}
+\index{hasArrive@{hasArrive}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{hasArrive()}{hasArrive()}}
+{\footnotesize\ttfamily void Rocket\+::has\+Arrive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_abc02f9709cb2e0498021a779a7125fd9}\label{classRocket_abc02f9709cb2e0498021a779a7125fd9}} 
+\index{Rocket@{Rocket}!Launch@{Launch}}
+\index{Launch@{Launch}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{Launch()}{Launch()}}
+{\footnotesize\ttfamily void Rocket\+::\+Launch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classLaunch}{Launch}} the \mbox{\hyperlink{classRocket}{Rocket}}. 
+
+check that the \mbox{\hyperlink{classRocket}{Rocket}} is able to \mbox{\hyperlink{classLaunch}{Launch}}, if it is then change the state, fire both \mbox{\hyperlink{classRocket}{Rocket}} stages and set the arrived state to true. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classRocket_aa39d63c78ace7008d2db95a8d928a3b4}{get\+Rocket\+Status()}} handle\+Change() \mbox{\hyperlink{classRocket_a1c1432668896ed681065b8ca8e3d7664}{get\+Rocket\+Types()}} fire\+Engine() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classRocket_afe3f4e3dbbb2ba9d89a654f4b5278c87}\label{classRocket_afe3f4e3dbbb2ba9d89a654f4b5278c87}} 
+\index{Rocket@{Rocket}!makeMemento@{makeMemento}}
+\index{makeMemento@{makeMemento}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{makeMemento()}{makeMemento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRocketMemento}{Rocket\+Memento}} $\ast$ Rocket\+::make\+Memento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_a2c3b619a81afdaf5458a99a8029a2220}\label{classRocket_a2c3b619a81afdaf5458a99a8029a2220}} 
+\index{Rocket@{Rocket}!modify@{modify}}
+\index{modify@{modify}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{modify()}{modify()}}
+{\footnotesize\ttfamily void Rocket\+::modify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_af8c27b7d7c7a3d61db6a63b9d461c55d}\label{classRocket_af8c27b7d7c7a3d61db6a63b9d461c55d}} 
+\index{Rocket@{Rocket}!printRocket@{printRocket}}
+\index{printRocket@{printRocket}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{printRocket()}{printRocket()}}
+{\footnotesize\ttfamily void Rocket\+::print\+Rocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_a6dac86ec02a41979dd7aad7388e3422c}\label{classRocket_a6dac86ec02a41979dd7aad7388e3422c}} 
+\index{Rocket@{Rocket}!restore@{restore}}
+\index{restore@{restore}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily void Rocket\+::restore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRocketMemento}{Rocket\+Memento}} $\ast$}]{rm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_a89dc6c9914e632ec7b8e4e87afd4e8fc}\label{classRocket_a89dc6c9914e632ec7b8e4e87afd4e8fc}} 
+\index{Rocket@{Rocket}!setDestination@{setDestination}}
+\index{setDestination@{setDestination}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{setDestination()}{setDestination()}}
+{\footnotesize\ttfamily void Rocket\+::set\+Destination (\begin{DoxyParamCaption}\item[{int}]{dest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRocket_acf9b3e11d96f19e517cdc972448834a1}\label{classRocket_acf9b3e11d96f19e517cdc972448834a1}} 
+\index{Rocket@{Rocket}!setState@{setState}}
+\index{setState@{setState}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Rocket\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classState}{State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the state of \mbox{\hyperlink{classRocket}{Rocket}}. 
+
+sets the state of the \mbox{\hyperlink{classRocket}{Rocket}}. 
+\begin{DoxyParams}{Parameters}
+{\em state} & The state to set the \mbox{\hyperlink{classRocket}{Rocket}} to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRocket_a7fe4e4b279f932271ed8a282aa7ba5a9}\label{classRocket_a7fe4e4b279f932271ed8a282aa7ba5a9}} 
+\index{Rocket@{Rocket}!StaticFire@{StaticFire}}
+\index{StaticFire@{StaticFire}!Rocket@{Rocket}}
+\doxysubsubsection{\texorpdfstring{StaticFire()}{StaticFire()}}
+{\footnotesize\ttfamily void Rocket\+::\+Static\+Fire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Static fire the \mbox{\hyperlink{classRocket}{Rocket}}. 
+
+used to make sure the \mbox{\hyperlink{classRocket}{Rocket}} is ready for launch \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classRocket_aa39d63c78ace7008d2db95a8d928a3b4}{get\+Rocket\+Status()}} handle\+Change() \mbox{\hyperlink{classRocket_a1c1432668896ed681065b8ca8e3d7664}{get\+Rocket\+Types()}} fire\+Engine() 
+\end{DoxySeeAlso}

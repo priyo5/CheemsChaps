@@ -11,6 +11,11 @@
 
 using namespace std;
 class State;
+
+
+/// Rocket is the director for the entire heirarchy
+///
+///  An object that the user interacts with in order to create the Rocket, modify the Rockets contents and to test/launch the Rocket
 class Rocket
 {
 public:
@@ -21,7 +26,6 @@ public:
     //Getters
     RocketTypes* getRocketTypes();
     Spacecraft* getSpacecraft();
-    State* getReadyOrNot();
 
     //Setters
     void setDestination(int dest);

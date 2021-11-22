@@ -2,6 +2,10 @@
 #include <iostream>
 #include "StaticFireReady.h"
 
+/// Constructor for Rocket for a new state
+///
+/// initialises the private variables of Rocket and sets the state of the Rocket.
+/// @see setState() 
 Rocket::Rocket()
 {
     type = 0;
@@ -11,26 +15,50 @@ Rocket::Rocket()
     setState(new StaticFireReady());
 }
 
+/// Constructor for Rocket with state
+///
+/// initialises the private variables of Rocket and sets the state of the Rocket.
+/// @param state_ The state to set the Rocket to
 Rocket::Rocket(State *state_) {
     this->state = state_;
 }
 
+/// Gets the state of Rocket
+///
+/// uses the state variable to give the state that the Rocket is currently in.
+/// @return The state of the Rocket
 State* Rocket::getRocketState() {
     return state;
 }
 
+/// Sets the state of Rocket
+///
+/// sets the state of the Rocket.
+/// @param state The state to set the Rocket to
 void Rocket::setState(State *state) {
     this->state = state;
 }
 
+/// Will set a new state according to current state
+///
+/// if the current state is StaticFireReady() then state will be set to LaunchReady(), if the current state is LaunchReady() it will be set to DockedReady(), if current state is DockedReady() it will be set back to StaticFireReady().
+/// @see handleChange() StaticFireReady() LaunchReady() DockedReady()
 void Rocket::change() {
     this->state->handleChange(this);
 }
 
+/// Give a string of the state of the Rocket
+///
+/// allows for the outputting of the state by converting the state to string.
+/// @return String form of the current State
 string Rocket::getRocketStatus() {
     return state->getRocketStatus();
 }
 
+/// Launch the Rocket
+///
+/// check that the Rocket is able to Launch, if it is then change the state, fire both Rocket stages and set the arrived state to true.
+/// @see getRocketStatus() handleChange() getRocketTypes() fireEngine()
 void Rocket::Launch()
 {
     if(state->getRocketStatus() == "Launch")
@@ -48,6 +76,10 @@ void Rocket::Launch()
         cout << "Rocket has not passed the static fire test yet." << endl;
 }   
 
+/// Static fire the Rocket
+///
+/// used to make sure the Rocket is ready for launch
+/// @see getRocketStatus() handleChange() getRocketTypes() fireEngine()
 void Rocket::StaticFire()
 {
     //Checking if all rocket parts have been initialised
@@ -82,11 +114,6 @@ RocketTypes *Rocket::getRocketTypes()
 Spacecraft *Rocket::getSpacecraft()
 {
     return this->RocketBuild->getSpacecraft();
-}
-
-State *Rocket::getReadyOrNot()
-{
-    return this->state;
 }
 
 //Actually building the rocket
