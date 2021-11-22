@@ -9,15 +9,17 @@ using namespace std;
 class RocketState
 {
 private:
-    int DestinationDistance;
+    int numPeople;
+    int numSats;
     int RemainingFuel;
 
 public:
 
-    RocketState(int DestinationDistance, int RemainingFuel);
+    RocketState(int numPeople, int numSats, int RemainingFuel);
 
     int getRemainingFuel(){return this -> RemainingFuel;};
-    int getDestinationDistance(){return this -> DestinationDistance;};
+    int getNumPeople(){return this -> numPeople;};
+    int getNumSats(){return this -> numSats;};
 };
 
 #endif

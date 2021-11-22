@@ -1,6 +1,7 @@
 #include "RocketState.h"
 
-RocketState::RocketState(int DestinationDistance, int RemainingFuel):
+RocketState::RocketState(int numPeople, int numSats, int RemainingFuel):
     RemainingFuel(RemainingFuel),
-    DestinationDistance(DestinationDistance)
+    numPeople(numPeople),
+    numSats(numSats)
 {}

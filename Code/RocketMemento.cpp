@@ -1,7 +1,8 @@
 #include "RocketMemento.h"
 
-RocketMemento::RocketMemento(int rf, int dd, RocketState* rs):
+RocketMemento::RocketMemento(int np, int ns, int rf, RocketState* rs):
     RemainingFuel(rf),
-    DestinationDistance(dd),
+    numPeople(np),
+    numSats(ns),
     rstate(rs)
 {}

@@ -106,9 +106,11 @@ void Rocket::BuildRocket(int type)
 
 RocketMemento* Rocket::makeMemento()
 {
-    RocketState* rstate = new RocketState(DestinationDistance, RemainingFuel);
+    cout << "Creating a save of the Rocket before takeoff." << endl;
 
-    return new RocketMemento(DestinationDistance, RemainingFuel, rstate);
+    RocketState* rstate = new RocketState(this -> getSpacecraft() -> getNumPeople(), this -> getSpacecraft() -> getNumSats(), RemainingFuel);
+
+    return new RocketMemento(this -> getSpacecraft() -> getNumPeople(), this -> getSpacecraft() -> getNumSats(), RemainingFuel, rstate);
 }
 
 RocketState* Rocket::getState()
@@ -119,7 +121,8 @@ RocketState* Rocket::getState()
 void Rocket::restore(RocketMemento* rm)
 {
     rstate = rm -> getState();
-    DestinationDistance = rm -> getState() -> getDestinationDistance();
+    this -> getSpacecraft() -> setNumPeople(rm -> getState() -> getNumPeople());
+    this -> getSpacecraft() -> setNumSats(rm -> getState() -> getNumSats());
     RemainingFuel = rm -> getState() -> getRemainingFuel();
 }
 
@@ -149,6 +152,7 @@ void Rocket::printRocket()
     if(type == 0) //People
     {
         cout << "Rocket Type:           Falcon 9." << endl;
+        cout << "Rocket Fuel:           " << this -> RemainingFuel << endl;
         cout << "Space Craft:           Crew-Dragon." << endl;
         cout << "To be transported:     People." << endl;
         cout << "Number of people:      " << this->getSpacecraft()->getNumPeople() << "."<< endl;
@@ -156,6 +160,7 @@ void Rocket::printRocket()
     if(type == 1) //Satellite
     {
         cout << "Rocket Type:           Falcon Heavy." << endl;
+        cout << "Rocket Fuel:           " << this -> RemainingFuel << endl;
         cout << "Space Craft:           Dragon-Space-Craft." << endl;
         cout << "To be transported:     A single Satellite." << endl;
         cout << "Number of Satellites:  " << this->getSpacecraft()->getNumSats() << "."<< endl;
@@ -163,6 +168,7 @@ void Rocket::printRocket()
     if(type == 2) //Starlink
     {
         cout << "Rocket Type:           Falcon Heavy." << endl;
+        cout << "Rocket Fuel:           " << this -> RemainingFuel << endl;
         cout << "Space Craft:           Dragon-Space-Craft." << endl;
         cout << "To be transported:     Starlink fleet of Satellites." << endl;
         cout << "Number of Satellites:  " << this->getSpacecraft()->getNumSats() << "."<< endl;
@@ -199,10 +205,12 @@ void Rocket::arrive()
     {
         this->getSpacecraft()->getCargo()->setArrived(true);
         this->getSpacecraft()->getCargo()->notify();
+        this -> getSpacecraft() -> setNumSats(0);
     }
     else
     {
         cout << "Fix something with humans arriving" << endl;
+        this -> getSpacecraft() -> setNumPeople(0);
     }
 }
 

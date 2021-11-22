@@ -34,29 +34,30 @@ int main()
      cout << "\n";
 
      rocket->printRocket();
-
-//     rocket->hasArrive();   //Checking if the cargo has arrived (which it shouldn't)
-//     rocket->arrive();      //Making the cargo arrive
-//     rocket->hasArrive();   //Checking if the cargo has arrived (which it should)
+    
     /*************************************************/
 
 
     /*************Observer attaching**************/
 
-   cout << "\n------------Adding an observer to the container---------------\n" << endl;
+    cout << "\n------------Adding an observer to the container---------------\n" << endl;
 
-    rocket->hasArrive();
-    
-
-//     ContainerItems* tempContainer = rocket->getSpacecraft()->getCargo();
-//     ArrivalObserver* sat_1_Observer = new ArrivalObserver(tempContainer);
-//     tempContainer->attach(sat_1_Observer);
+    rocket->hasArrive();       //Checking if the cargo has arrived (which it shouldn't)
 
     /*************Actual Launch Sequence**************/
      Launch *launch = new Launch(rocket);
      StaticFire *staticFire = new StaticFire(rocket);
 
      ControlBoard *aoo = new ControlBoard(launch, staticFire);
+
+    /*************Creating a 'save' of the rocket**************/
+
+    RocketCaretaker* RStore = new RocketCaretaker();    //Creating a caretaker for the rocket object
+
+    RStore -> setMemento(rocket -> makeMemento());      //Creating a Memento of the Rocket before it launches
+
+
+    /*************************************************/
 
     int launch_type = 1;
     while(launch_type !=2) //Loop doing static tests and modifications until actual launch commences
@@ -71,53 +72,26 @@ int main()
     //RUBEN - Check the state and make sure its ready for launch before actually launching the rocket
     aoo -> PressL();
 
-    rocket->hasArrive();
+    rocket->hasArrive();    //Checking if the cargo has arrived (which it should)
 
+    cout << "The final details of the Rocket after its expedition:" << endl;
+
+    rocket -> printRocket();
+
+    int wantrestore = 0;
+    cout << "Would you like to restore the Rocket to it's initial condition?\n0-Yes\n1-No" << endl;
+    cin >> wantrestore;
+    if(wantrestore == 0)
+    {
+        rocket -> restore(RStore -> getMemento());
+
+        cout << "The Rocket's restored condition:" << endl;
+
+        rocket -> printRocket();
+    }
+    
     /*************************************************/
 
-
-
-
-    //RocketCaretaker* RStore = new RocketCaretaker();
-
-    //RStore -> setMemento(rocket -> makeMemento());
-
-    // cout << "Rocket's current fuel before use: " << rocket -> getFuel() << endl;
-
-    // rocket -> setFuel(5);
-
-    // cout << "Rocket's current fuel after use: " << rocket -> getFuel() << endl;
-    
-    // rocket -> restore(RStore -> getMemento());
-
-    // cout << "Rocket's current fuel after restore: " << rocket -> getFuel() << endl;
-
-
-    
-//    rocket->BuildRocket(2);
-//    cout<<rocket->getSpacecraft()->getCargo()->getNumSat()<<endl;
-    // rocket->getSpacecraft()->getObserver()->print();
-    //notify observers
-    //Daniel - Testing filling tempContainer with container items
-    //This code will go in Reece's spacecraft class when "loading" cargo
-//    cout << "------------Creating a single satellite---------------" << endl;
-//    ContainerItems* tempContainer;
-//    tempContainer = new ContainerItems();
-//    tempContainer->add(new Satellite()); // Decorating
-//    tempContainer->print();
-//
-
-//
-//    cout << "\n---------------Satellite when it arrives----------------" << endl;
-//    tempContainer->setArrived(true);
-//    tempContainer->notify();
-//    sat_1_Observer->print();
-//
-//    cout << "\n------------Creating a Starlink Fleet of satellites---------------\n" << endl;
-//    Cargo* container2;
-//    container2 = new ContainerItems();
-//    container2->add(new Starlink());
-//    container2->print();
 
     return 0;
 }
