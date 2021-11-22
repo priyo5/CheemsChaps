@@ -1,8 +1,0 @@
-#VP backup files 
-*.bak* 
-*.lck 
- 
-*.DS_Store 
-.idea/ 
-cmake-build-debug/ 
-CMakeLists.txt
