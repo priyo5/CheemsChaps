@@ -5,14 +5,12 @@
 #include "PeopleRocketBuilder.h"
 #include "SateliteRocketBuilder.h"
 #include "StarlinkRocketBuilder.h"
-#include "LaunchReady.h"
-#include "State.h"
 #include "Spacecraft.h"
 #include "RocketMemento.h"
-#include "StaticFireReady.h"
+
 
 using namespace std;
-
+class State;
 class Rocket
 {
 public:
@@ -58,7 +56,7 @@ public:
 
 protected:
     Rocket(State* state_);
-    State* getState();
+    State* getRocketState();
 
 private:
     State* state;

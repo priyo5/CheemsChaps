@@ -9,7 +9,7 @@ VacuumMerlinEngine::VacuumMerlinEngine() : Engine(5,50000)
 
 void VacuumMerlinEngine::setDepletionRate(int d) 
 {
-	setDepletionRate(d);
+	setDepletion(d);
 }
 
 int VacuumMerlinEngine::fuelDepletion(int dist) 
@@ -30,4 +30,8 @@ int VacuumMerlinEngine::fireEngine(int dist)
 	cout << "Now firing stage 2!" << endl;
 	this->setUsed();
 	return this->fuelDepletion(dist);
+}
+
+void VacuumMerlinEngine::refuel() {
+    setFuel(50000);
 }

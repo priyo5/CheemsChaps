@@ -1,7 +1,7 @@
 #ifndef ROCKETBUILDER_H
 #define ROCKETBUILDER_H
 
-#include "State.h"
+
 #include "Spacecraft.h"
 #include "RocketTypes.h"
 #include "Engine.h"

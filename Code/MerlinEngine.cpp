@@ -9,7 +9,7 @@ MerlinEngine::MerlinEngine() : Engine(5,20000)
 
 void MerlinEngine::setDepletionRate(int d) 
 {
-	setDepletionRate(d);
+	setDepletion(d);
 }
 
 int MerlinEngine::fuelDepletion(int dist) 
@@ -30,4 +30,8 @@ int MerlinEngine::fireEngine(int dist)
 	cout << "Now firing stage 1!" << endl;
   	this->setUsed();
 	return this->fuelDepletion(dist);
+}
+
+void MerlinEngine::refuel() {
+    setFuel(20000);
 }

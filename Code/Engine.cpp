@@ -18,6 +18,11 @@ void Engine::setUsed()
 	this->used++;
 }
 
+void Engine::setFuel(int newAmount) {
+    cout << "Refueled with " << newAmount << " litres of fuel\n";
+    this->Fuel = newAmount;
+}
+
 int Engine::getUsed()
 {
 	return this->used;

@@ -74,7 +74,7 @@ int main()
              }
              if(launch_type == 2)
              {
-                 if(rocket->getReadyOrNot()->getPassedTest()) //If static test passed first
+                 if(rocket->getRocketStatus() == "Launch") //If static test passed first
                      exit++;                                  //Can now exit and proceed
                  else                                         //Static test was not run first
                      cout << "Please run a Static Fire Test before attempting to launch." << endl;

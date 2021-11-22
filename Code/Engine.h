@@ -3,13 +3,7 @@
 
 class Engine 
 {
-	private:
-		int Fuel;
-		int used;
-		int depletion;
-		Engine* succ;
-
-	public:
+public:
 		Engine(int, int);
 		int getFuel();
 		void deplete();
@@ -19,6 +13,7 @@ class Engine
 		void setUsed();
 		int getUsed();
 		int getPossibleDistance();
+        virtual void refuel() = 0;
 
 		// Chain of responsibility
 		void setSuccessor(Engine*);
@@ -26,5 +21,11 @@ class Engine
 
 		virtual int fuelDepletion(int) = 0;
 		virtual int fireEngine(int) = 0;
+        void setFuel(int);
+private:
+    int Fuel;
+    int used;
+    int depletion;
+    Engine* succ;
 };
 #endif

@@ -11,5 +11,6 @@ class MerlinEngine : public Engine
 
 		virtual int fuelDepletion(int);
 		virtual int fireEngine(int);
+        virtual void refuel();
 };
 #endif
