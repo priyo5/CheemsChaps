@@ -44,24 +44,24 @@
 For this group project we were tasked with creating a program that builds, tests and launches different types of rockets.
 This includes building a rocket type, satellite type and engine type. Cargo can also be added on the rocket to be sent into outer space.
 
-The poject was split into four main sub-tasks:
+### The poject was split into four main sub-tasks
 * Asking the user for flight details (rocket types, destination planet, etc...)
 * Building the users desired rocket and setting the details for the flight.
 * Launching the rocket as a Simulation.
 * (Potentially) Re-using the rocket for another simulation.
 
-<h3>The 3 rockets you can build are:</h3>
+### 3 rockets you can build are
 * People Rocket: Falcon 9 Rocket, Crew Dragon Spacecraft with a stage 1 Merlin Engine and a stage 2 Vacuum Merlin Engine
 * Satellite Rocket: Falcon Heavy Rocket, Dragon Spacecraft with satellite with a stage 1 Merlin Engine and a stage 2 Vacuum Merlin Engine
 * Starlink Rocket: Falcon Heavy Rocket, Dragon Spacecraft with satellite with a stage 1 Merlin Engine and a stage 2 Vacuum Merlin Engine
 
-<h3>Launching a simulation</h3>
+### Launching a simulation
 * The user can contiuously modify the rocket and run Static fire tests.
 * Once a static fire test completes and passes, the rocket will be ready to launch.
 * The launch will display the fuel left at regular time intervals (after cetrtain distances travelled).
 * The rocket will then display that the goods to be transported have arrived.
 
-<h3>Re-using rockets for the next simulation</h3>
+### Re-using rockets for the next simulation
 * The user will be prompted to choose whether to re-use the already built rocket, create a new rocket, or the end the simulation.
 * If the user chooses to re-use the rocket, then the simulation will startover with pre-set variables.
 
