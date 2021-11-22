@@ -124,13 +124,16 @@ NOTE: all commands should be integers, no string input is needed*
 
 1. Pick a destination
 2. Pick what type of rocket you want from our 3 predefined choices
-3. Appropriate Rocket will be initialized
+3. Appropriate Rocket will be initialized (If people rocket picked, choose amount of people)
 4. Pick between:
    1. Static Fire test
    2. Actual Launch
    3. Modify rocket before launch
    *NOTE: Static fire test needs to pass first before an actual launch can be done*
-5.
+5. Pick between:
+   1. Re-use Rocket (restore with memento)
+   2. Build an entirely new rocket
+   3. End the simulation
 
 
 <!-- CONTACT -->
