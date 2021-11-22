@@ -28,7 +28,7 @@
       </ul>
     </li>
     <li>
-      <a href="#hw-to-run-our-program">How to run our program</a>
+      <a href="#how-to-run-our-program">How to run our program</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -119,7 +119,18 @@ Clone the repo
 <!-- USAGE EXAMPLES -->
 # Usage of our main
 
-* Here we will detail how to use our main
+*Here we will detail how to use our main:
+NOTE: all commands should be integers, no string input is needed*
+
+1. Pick a destination
+2. Pick what type of rocket you want from our 3 predefined choices
+3. Appropriate Rocket will be initialized
+4. Pick between:
+   1. Static Fire test
+   2. Actual Launch
+   3. Modify rocket before launch
+   *NOTE: Static fire test needs to pass first before an actual launch can be done*
+5.
 
 
 <!-- CONTACT -->
