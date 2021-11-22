@@ -20,7 +20,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-         <li><a href="#The-oject-was-split-into-four-main-sub-tasks">Our 4 main sub-tasks</a></li>
+         <li><a href="#The-project-was-split-into-four-main-sub-tasks">Our 4 main sub-tasks</a></li>
          <li><a href="3-rockets-you-can-build-are">3 rockets you can build</a></li>
          <li><a href="#Launching-a-simulation">Launching a simulation</a></li>
         <li><a href="#Re-using-rockets-for-the-next-simulation">Re-using rockets for the next simulation</a></li>
@@ -34,7 +34,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage-of-our-main">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 
@@ -47,7 +47,7 @@
 For this group project we were tasked with creating a program that builds, tests and launches different types of rockets.
 This includes building a rocket type, satellite type and engine type. Cargo can also be added on the rocket to be sent into outer space.
 
-### The poject was split into four main sub-tasks
+### The project was split into four main sub-tasks
 * Asking the user for flight details (rocket types, destination planet, etc...)
 * Building the users desired rocket and setting the details for the flight.
 * Launching the rocket as a Simulation.
@@ -110,15 +110,16 @@ Clone the repo
    ```sh
    git clone https://github.com/priyo5/CheemsChaps
    ```
+* Run the main
+  ```sh
+  make
+  make run
+  ```
 
 <!-- USAGE EXAMPLES -->
-# Usage
+# Usage of our main
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+* Here we will detail how to use our main
 
 
 <!-- CONTACT -->
