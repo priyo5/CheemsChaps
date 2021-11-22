@@ -15,12 +15,15 @@
   </p>
 </div>
 
-<details>
-  <summary>Table of Contents</summary>
+  <h2>Table of Contents</h2>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+         <li><a href="#built-with">The poject was split into four main sub-tasks</a></li>
+         <li><a href="#built-with">3 rockets you can build</a></li>
+         <li><a href="#built-with">Launching a simulation</a></li>
+        <li><a href="#built-with">Re-using rockets for the next simulation</a></li>
         <li><a href="#built-with">10 Design Patterns Used</a></li>
       </ul>
     </li>
@@ -34,7 +37,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
-</details>
+
 
 
 
@@ -109,7 +112,7 @@ Clone the repo
    ```
 
 <!-- USAGE EXAMPLES -->
-## Usage
+# Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
