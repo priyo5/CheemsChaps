@@ -62,10 +62,10 @@ The poject was split into four main sub-tasks:
 * The rocket will then display that the goods to be transported have arrived.
 
 <h3>Re-using rockets for the next simulation</h3>
+* The user will be prompted to choose whether to re-use the already built rocket, create a new rocket, or the end the simulation.
+* If the user chooses to re-use the rocket, then the simulation will startover with pre-set variables.
 
-### Built With
-
-<h3>10 Design Patterns used:</h3>
+### Design Patterns used to model our system
 
 * Builder
 * Template Method
@@ -78,6 +78,7 @@ The poject was split into four main sub-tasks:
 * Composite
 * Chain of Responsibility
 
+*The responsibilities of each design pattern is detailed in the <a href="https://docs.google.com/document/d/1KPRTDBuYREFpHLTE3IBjX0e3plSBI0--/edit?usp=sharing&ouid=118336233054149317239&rtpof=true&sd=true">CheemsChaps.doc</a>*
 
 <!-- GETTING STARTED -->
 ## How to run our program
