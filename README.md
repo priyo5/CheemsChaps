@@ -84,7 +84,7 @@ This includes building a rocket type, satellite type and engine type. Cargo can 
 *The responsibilities of each design pattern is detailed in the <a href="https://docs.google.com/document/d/1KPRTDBuYREFpHLTE3IBjX0e3plSBI0--/edit?usp=sharing&ouid=118336233054149317239&rtpof=true&sd=true">CheemsChaps.doc</a>*
 
 <!-- GETTING STARTED -->
-## How to run our program
+# How to run our program
 
 This is an example of what instructions to use to set up your project locally.
 To get a local copy up and running follow these simple example steps.
@@ -137,7 +137,7 @@ NOTE: all commands should be integers, no string input is needed*
 
 
 <!-- CONTACT -->
-## Contact
+# Contact
 
 Daniel Azmanov - [u20441135@tuks.co.za](u20441135@tuks.co.za)
 
