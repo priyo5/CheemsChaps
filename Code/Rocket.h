@@ -21,7 +21,6 @@ public:
     //Getters
     RocketTypes* getRocketTypes();
     Spacecraft* getSpacecraft();
-    State* getReadyOrNot();
 
     //Setters
     void setDestination(int dest);

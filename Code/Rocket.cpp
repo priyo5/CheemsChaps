@@ -50,27 +50,35 @@ void Rocket::Launch()
 
 void Rocket::StaticFire()
 {
-    //Checking if all rocket parts have been initialised
-    int correct_vitals = 0;
-    if(this->getRocketTypes() != nullptr)               //Rocket Body
-            correct_vitals++;
-    if(this->getSpacecraft() != nullptr)                //Spacecraft aboard the rocket
-        correct_vitals++;
-    if(this->getRocketTypes()->getStage1() != nullptr)  //Stage1 engine
-        correct_vitals++;
-    if(this->getRocketTypes()->getStage2() != nullptr)  //Stage2 engine
-        correct_vitals++;
-    if(this->calculateDistancexFuel())                  //Rocket has enough fuel to reach destination planet
-        correct_vitals++;
-
-    if(correct_vitals == 5)
+    if  (this->state->getRocketStatus() == "StaticFire")
     {
-        state->handleChange(this); //Just couts and changes state to Launch
+        //Checking if all rocket parts have been initialised
+        int correct_vitals = 0;
+        if(this->getRocketTypes() != nullptr)               //Rocket Body
+            correct_vitals++;
+        if(this->getSpacecraft() != nullptr)                //Spacecraft aboard the rocket
+            correct_vitals++;
+        if(this->getRocketTypes()->getStage1() != nullptr)  //Stage1 engine
+            correct_vitals++;
+        if(this->getRocketTypes()->getStage2() != nullptr)  //Stage2 engine
+            correct_vitals++;
+        if(this->calculateDistancexFuel())                  //Rocket has enough fuel to reach destination planet
+            correct_vitals++;
+
+        if(correct_vitals == 5)
+        {
+            state->handleChange(this); //Just couts and changes state to Launch
+        }
+        else
+        {
+            cout << "Rocket is incomplete." << endl;
+        }
     }
     else
     {
-        cout << "Rocket is incomplete." << endl;
+        cout << "Rocket has already passed the static fire test!\n";
     }
+
 }
 
 //Getters
@@ -82,11 +90,6 @@ RocketTypes *Rocket::getRocketTypes()
 Spacecraft *Rocket::getSpacecraft()
 {
     return this->RocketBuild->getSpacecraft();
-}
-
-State *Rocket::getReadyOrNot()
-{
-    return this->state;
 }
 
 //Actually building the rocket
