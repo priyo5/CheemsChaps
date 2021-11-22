@@ -32,18 +32,36 @@ int main()
      cout << "\n";
 
      rocket->printRocket();
-     rocket->hasArrive();
-     rocket->arrive();
-     rocket->hasArrive();
+
+//     rocket->hasArrive();   //Checking if the cargo has arrived (which it shouldn't)
+//     rocket->arrive();      //Making the cargo arrive
+//     rocket->hasArrive();   //Checking if the cargo has arrived (which it shouldn't)
     /*************************************************/
 
-    // Launch *launch = new Launch(rocket);
-    // StaticFire *staticFire = new StaticFire(rocket);
 
-    // ControlBoard *aoo = new ControlBoard(launch, staticFire);
+    /*************Actual Launch Sequence**************/
+     Launch *launch = new Launch(rocket);
+     StaticFire *staticFire = new StaticFire(rocket);
 
-    // aoo -> PressL();
-    // aoo -> PressS();
+     ControlBoard *aoo = new ControlBoard(launch, staticFire);
+
+    int launch_type = 1;
+    while(launch_type !=2) //Loop doing static tests and modifications until actual launch commences
+    {
+        cout << "Would you like to run a static fire test launch, or an Actual launch?\n1-Static Fire Test\n2-Actual Launch\n3-Modify rocket" << endl;
+        cin >> launch_type;
+        if(launch_type == 1)   //Static Fire Test
+            aoo -> PressS();
+        if(launch_type == 3)   //Modify
+            rocket->modify();  //Then set the state to LaunchState
+    }
+    //RUBEN - Check the state and make sure its ready for launch before actually launching the rocket
+    aoo -> PressL();
+
+    /*************************************************/
+
+
+
 
     //RocketCaretaker* RStore = new RocketCaretaker();
 

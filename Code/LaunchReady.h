@@ -3,10 +3,12 @@
 
 #include "State.h"
 
-class LaunchReady : State {
+class LaunchReady : public State {
 	public:
+    LaunchReady();
 	void handleLaunch();
 	void handleStaticFireTest();
+    bool getPassedTest();
 };
 
 #endif

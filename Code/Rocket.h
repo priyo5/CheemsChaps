@@ -9,6 +9,7 @@
 #include "State.h"
 #include "Spacecraft.h"
 #include "RocketMemento.h"
+#include "StaticFireReady.h"
 
 using namespace std;
 
@@ -22,6 +23,7 @@ public:
     //Getters
     RocketTypes* getRocketTypes();
     Spacecraft* getSpacecraft();
+    State* getReadyOrNot();
 
     //Setters
     void setDestination(int dest);
@@ -35,7 +37,7 @@ public:
     void restore(RocketMemento* rm);
 
     //Fuel Function
-    void calculateDistancexFuel();
+    bool calculateDistancexFuel();
 
     //Print method to give a detailed breakdown of the rocket you have created
     void printRocket();
@@ -46,14 +48,24 @@ public:
     //Making the cargo arrive
     void arrive();
 
+    //Continue flying
+    void useThrusters();
+
+    //Deplete the fuel every time thrusters are used
+    void deplete();
+
+    //Modify menu
+    void modify();
+
 private:
     State* state;
+    int num_times_used_thrusters;
 
     //Variables (parts) that the Rocket contains
-    int type; //The type of rocket the user wanted to build.
-    long DestinationDistance;
-    string destinationName;
-    int RemainingFuel;
+    int type;                           //The type of rocket the user wanted to build.
+    long DestinationDistance;           //This distance according to the selected planets
+    string destinationName;             //Name of selected planets
+    int RemainingFuel;                  //Fuel remaining according to the number of times thrusters are used
 
     //Builders
     RocketBuilder* RocketBuild;
