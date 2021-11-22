@@ -81,10 +81,10 @@ The code preferably needs to be run on a Linux or Mac operating system that has 
   sudo apt-get install gcc
   ```
 
-  * g++:
-    ```sh
-    sudo apt-get install g++
-    ```
+* g++:
+  ```sh
+  sudo apt-get install g++
+  ```
 
 ### Installation
 
