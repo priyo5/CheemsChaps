@@ -47,6 +47,8 @@
 For this group project we were tasked with creating a program that builds, tests and launches different types of rockets.
 This includes building a rocket type, satellite type and engine type. Cargo can also be added on the rocket to be sent into outer space.
 
+[DOXYGEN DOCUMENTATION](https://priyo5.github.io/CheemsChaps/html/index.html)
+
 ### The project was split into four main sub-tasks
 * Asking the user for flight details (rocket types, destination planet, etc...)
 * Building the users desired rocket and setting the details for the flight.
