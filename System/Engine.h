@@ -1,6 +1,10 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
+/// Engine is the Abstract Producr for the Engine Hierarchy
+///
+///  Defines the Generalisation for the different Engines created by the factorys
+
 class Engine 
 {
 public:

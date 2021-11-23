@@ -3,6 +3,10 @@
 
 #include "RocketTypes.h"
 
+/// Falcon9  is a Concrete Proudct for the RocketTypes Hierarchy
+///
+///  Implements the interface for the RocketTypes product
+
 class Falcon9 : public RocketTypes
 {
     public:

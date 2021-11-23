@@ -3,6 +3,10 @@
 
 #include "Engine.h"
 
+/// MerlinEngine is a Concrete Proudct for the Engine Hierarchy
+///
+///  Implements the interface for the Engine product
+
 class MerlinEngine : public Engine 
 {
 	public:

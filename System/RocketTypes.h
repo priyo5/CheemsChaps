@@ -3,6 +3,10 @@
 
 #include "Engine.h"
 
+/// RocketTypes is the Abstract Producr for the RocketTypes Hierarchy
+///
+///  Defines the Generalisation for the different Rockettypes created by the factorys
+
 class RocketTypes 
 {
 	private:

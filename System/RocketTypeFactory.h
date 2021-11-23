@@ -4,6 +4,10 @@
 #include "RocketTypes.h"
 #include "Engine.h"
 
+/// RocketTypeFactory is the Creator for the RocketTypesFactory Hierarchy
+///
+///  Defines the factory method to return Rockettypes objects
+
 class RocketTypeFactory
 {
 	public:
