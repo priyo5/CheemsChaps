@@ -3,6 +3,10 @@
 
 #include "Engine.h"
 
+/// EngineFactory is the Creator for the EngineFactory Hierarchy
+///
+///  Defines the factory method to return Engine objects
+
 class EngineFactory
 {
 	public:

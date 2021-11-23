@@ -5,6 +5,10 @@
 #include "RocketTypeFactory.h"
 #include "Engine.h"
 
+/// FalconHeavyFactory is a Concrete Creator for the RocketTypes Factory Hierarchy
+///
+///  Overides the factory method to return an instanc of FalconHeavy
+
 class FalconHeavyFactory : public RocketTypeFactory
 {
     public:

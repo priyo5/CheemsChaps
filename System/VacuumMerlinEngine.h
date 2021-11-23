@@ -3,6 +3,10 @@
 
 #include "Engine.h"
 
+/// VacuumMerlinEngine is a Concrete Proudct for the Engine Hierarchy
+///
+///  Implements the interface for the Engine product
+
 class VacuumMerlinEngine : public Engine {
 	public:
 		VacuumMerlinEngine();
