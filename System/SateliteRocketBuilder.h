@@ -3,7 +3,9 @@
 
 #include "RocketBuilder.h"
 
-
+/// SateliteRocketBuilder is a concrete builder for our builder pattern
+///
+/// This concrete builder builds a satellite
 class SateliteRocketBuilder: public RocketBuilder{
 public:
     void BuildRocketType();

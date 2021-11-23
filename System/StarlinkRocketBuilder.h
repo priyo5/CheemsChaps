@@ -2,7 +2,9 @@
 #define STARLINKROCKETBUILDER_H
 
 #include "RocketBuilder.h"
-
+/// StarlinkRocketBuilder is a concrete builder for our builder pattern
+///
+/// This concrete builder builds a starlink
 
 class StarlinkRocketBuilder : public  RocketBuilder{
 public:
