@@ -8,9 +8,9 @@
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{classStaticFireReady_a721f989e304efa8ecbedd157a353d36d}{handle\+Change}} (\mbox{\hyperlink{classRocket}{Rocket}} $\ast$rocket)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles the state and sets new state. \end{DoxyCompactList}\item 
 virtual string \mbox{\hyperlink{classStaticFireReady_a478baeb716697ea3593f0fa7011d1de0}{get\+Rocket\+Status}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -22,6 +22,13 @@ virtual string \mbox{\hyperlink{classStaticFireReady_a478baeb716697ea3593f0fa701
 
 
 
+Return current state. 
+
+Handling through concrete state by setting the next state. \begin{DoxyReturn}{Returns}
+Current state of rocket as string 
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{classState_a6011505608d60510c02bfffa062e4bf6}{State}}.
 
 \mbox{\Hypertarget{classStaticFireReady_a721f989e304efa8ecbedd157a353d36d}\label{classStaticFireReady_a721f989e304efa8ecbedd157a353d36d}} 
@@ -30,6 +37,15 @@ Implements \mbox{\hyperlink{classState_a6011505608d60510c02bfffa062e4bf6}{State}
 \doxysubsubsection{\texorpdfstring{handleChange()}{handleChange()}}
 {\footnotesize\ttfamily void Static\+Fire\+Ready\+::handle\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRocket}{Rocket}} $\ast$}]{rocket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Handles the state and sets new state. 
+
+Handling through concrete state by setting the next state. 
+\begin{DoxyParams}{Parameters}
+{\em Current} & rocket \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classState_a7bf7e355197bae3299b0ece0482cfdf8}{State}}.

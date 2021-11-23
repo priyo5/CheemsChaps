@@ -2,16 +2,26 @@
 \label{classDockedReady}\index{DockedReady@{DockedReady}}
 
 
+\mbox{\hyperlink{classDockedReady}{Docked\+Ready}} is a concrete\+State participant for the state design pattern.  
+
+
+
+
 {\ttfamily \#include $<$Docked\+Ready.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{classDockedReady_a43e87cc95a17028fbf2f9a8d6026ccba}{handle\+Change}} (\mbox{\hyperlink{classRocket}{Rocket}} $\ast$rocket)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles the state and sets new state. \end{DoxyCompactList}\item 
 virtual string \mbox{\hyperlink{classDockedReady_a3e70b5da92ca240ef31d17bd654e2093}{get\+Rocket\+Status}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classDockedReady}{Docked\+Ready}} is a concrete\+State participant for the state design pattern. 
+
+\mbox{\hyperlink{classDockedReady}{Docked\+Ready}} is the state where the rocket has reached its target destination is not currently flying or being tested 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classDockedReady_a3e70b5da92ca240ef31d17bd654e2093}\label{classDockedReady_a3e70b5da92ca240ef31d17bd654e2093}} 
@@ -22,6 +32,13 @@ virtual string \mbox{\hyperlink{classDockedReady_a3e70b5da92ca240ef31d17bd654e20
 
 
 
+Return current state. 
+
+Handling through concrete state by setting the next state. \begin{DoxyReturn}{Returns}
+Current state of rocket as string 
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{classState_a6011505608d60510c02bfffa062e4bf6}{State}}.
 
 \mbox{\Hypertarget{classDockedReady_a43e87cc95a17028fbf2f9a8d6026ccba}\label{classDockedReady_a43e87cc95a17028fbf2f9a8d6026ccba}} 
@@ -30,6 +47,15 @@ Implements \mbox{\hyperlink{classState_a6011505608d60510c02bfffa062e4bf6}{State}
 \doxysubsubsection{\texorpdfstring{handleChange()}{handleChange()}}
 {\footnotesize\ttfamily void Docked\+Ready\+::handle\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRocket}{Rocket}} $\ast$}]{rocket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Handles the state and sets new state. 
+
+Handling through concrete state by setting the next state. 
+\begin{DoxyParams}{Parameters}
+{\em Current} & rocket \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classState_a7bf7e355197bae3299b0ece0482cfdf8}{State}}.

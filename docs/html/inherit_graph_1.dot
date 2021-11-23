@@ -8,5 +8,5 @@ digraph "Graphical Class Hierarchy"
   Node0 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 [label="Launch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLaunch.html",tooltip=" "];
   Node0 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="StaticFire",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStaticFire.html",tooltip=" "];
+  Node2 [label="StaticFire",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classStaticFire.html",tooltip="StaticFire is a concreteState participant for the state design pattern."];
 }
