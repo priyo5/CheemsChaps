@@ -19,7 +19,7 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul> <li><a href="#DOXYGEN DOCUMENTATION">Doxygen Documentation</a></li>
+      <ul> <li><a href="#doxygen-documentation">Doxygen Documentation</a></li>
          <li><a href="#The-project-was-split-into-four-main-sub-tasks">Our 4 main sub-tasks</a></li>
          <li><a href="#3-rockets-you-can-build-are">3 rockets you can build</a></li>
          <li><a href="#Launching-a-simulation">Launching a simulation</a></li>
