@@ -15,7 +15,9 @@
 
 #include <string>
 using namespace std;
-
+/// RocketBuilder is the builder for our builder pattern
+///
+/// Our Builder participant which acts as our interface for building our predefined rockets. Also instantiates factories
 class RocketBuilder
 {
 public:

@@ -2,7 +2,9 @@
 #define PEOPLEROCKETBUILDER_H
 
 #include "RocketBuilder.h"
-
+/// PeopleRocketBuilder is a concrete builder for our builder pattern
+///
+/// This concrete builder builds a rocket with people
 class PeopleRocketBuilder: public RocketBuilder  {
 public:
 

@@ -8,7 +8,9 @@
 #include "Command.h"
 
 using namespace std;
-
+/// StaticFire is a concreteState participant for the state design pattern
+///
+/// StaticFire is the state where have not yet done a static fire test before being able to run an actual launch
 class StaticFire : Command
 {
 private:
